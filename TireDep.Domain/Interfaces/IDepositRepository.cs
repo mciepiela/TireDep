@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using TireDep.Domain.Model;
 
+
+
 namespace TireDep.Domain.Interfaces
 {
     public interface IDepositRepository

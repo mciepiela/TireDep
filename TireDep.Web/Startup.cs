@@ -10,8 +10,13 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using AutoMapper;
+using TireDep.App;
+using TireDep.Domain.Interfaces;
 using TireDep.Infrastructure;
+using TireDep.Infrastructure.Repo;
 using TireDep.Web.Data;
 
 namespace TireDep.Web
@@ -33,6 +38,8 @@ namespace TireDep.Web
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<Context>();
+            services.AddApp();
+            services.AddInfrastructure();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

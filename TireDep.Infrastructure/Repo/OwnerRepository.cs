@@ -9,7 +9,7 @@ namespace TireDep.Infrastructure.Repo
 {
 
 
-    class OwnerRepository : IOwnerRepository
+    public class OwnerRepository : IOwnerRepository
     {
         private readonly Context _context;
 

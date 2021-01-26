@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TireDep.Web", "TireDep.Web\TireDep.Web.csproj", "{381F33A5-C527-4FE8-9F57-651C7DD56C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.Web", "TireDep.Web\TireDep.Web.csproj", "{381F33A5-C527-4FE8-9F57-651C7DD56C30}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{ED1203A7-A67D-49B4-A185-78AB4355CD4F}"
 EndProject
@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CA21A360
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{2151948F-CE01-40C4-879E-D17D7549DAF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TireDep.App", "TireDep.App\TireDep.App.csproj", "{A94B56E0-B7A7-40B8-B83E-D238EBF11C0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.App", "TireDep.App\TireDep.App.csproj", "{A94B56E0-B7A7-40B8-B83E-D238EBF11C0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TireDep.Domain", "TireDep.Domain\TireDep.Domain.csproj", "{A4B939B2-9B8F-4D9A-A882-A56194BB02E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.Domain", "TireDep.Domain\TireDep.Domain.csproj", "{A4B939B2-9B8F-4D9A-A882-A56194BB02E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TireDep.Infrastructure", "TireDep.Infrastructure\TireDep.Infrastructure.csproj", "{662264E4-949D-4693-9DA3-7C530BBB3032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.Infrastructure", "TireDep.Infrastructure\TireDep.Infrastructure.csproj", "{662264E4-949D-4693-9DA3-7C530BBB3032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TireDep.Tests", "TireDep.Tests\TireDep.Tests.csproj", "{2CD65205-2D2F-47BD-AA94-41EE958D3F45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.Tests", "TireDep.Tests\TireDep.Tests.csproj", "{2CD65205-2D2F-47BD-AA94-41EE958D3F45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

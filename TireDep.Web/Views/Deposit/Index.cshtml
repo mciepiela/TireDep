@@ -1,0 +1,59 @@
+﻿ @model TireDep.App.ViewModels.Deposit.LisOfDepositsForListVm
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+ <h1>List of active Deposits</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Tire Tread Height
+            </th>
+            <th>
+                Season Tire
+            </th>
+            <th>
+                Owner Information
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Deposits) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TireTreadHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeasonTire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "ViewDepositById", new {  depositId = item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
