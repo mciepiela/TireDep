@@ -9,10 +9,11 @@ namespace TireDep.App.Interfaces
 {
     public interface IDepositService
     {
-        LisOfDepositsForListVm GetAllDepositForList();
-        DepositDetailsVm AddDeposit(NewDepositVm newDeposit);
+        LisOfDepositsForListVm GetAllDepositForList(int pageSize, int pageNo, string searchString);
+        int AddDeposit(NewDepositVm newDeposit);
         DepositDetailsVm ViewDepositById(int depositId);
         DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId);
+        DepositListByOwnerListForVm ViewDepositsByOwnerName(string ownerName);
 
     }
 }

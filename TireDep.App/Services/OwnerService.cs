@@ -28,9 +28,6 @@ namespace TireDep.App.Services
             newOwnerDet.LastName = newOwner.LastName;
 
             return newOwnerDet;
-
-
-
         }
 
         public OwnerDetailsVm ViewOwnerById(int id)

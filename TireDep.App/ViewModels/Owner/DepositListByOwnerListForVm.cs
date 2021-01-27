@@ -8,6 +8,7 @@ namespace TireDep.App.ViewModels.Owner
     public class DepositListByOwnerListForVm
     {
         public List<DepositByOwnerVm> DepositByOwner { get; set; }
+        public string SearchString { get; set; }
         public int Count { get; set; }
     }
 }

@@ -24,6 +24,7 @@ namespace TireDep.Domain.Interfaces
 
 
          IQueryable<Deposit> GetAllActiveDeposits();
+         IQueryable<Deposit> GetAllDepositsByPiceOfName(string piceOfName);
 
 
          Deposit GetDepositById(int depositId);
@@ -32,6 +33,7 @@ namespace TireDep.Domain.Interfaces
         // dodatkowe metody do SeasonTire
 
         IQueryable<SeasonTire> GetAllSeasonTire();
+        
 
 
     }

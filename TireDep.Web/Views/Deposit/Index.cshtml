@@ -6,54 +6,98 @@
 
  <h1>List of active Deposits</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Tire Tread Height
-            </th>
-            <th>
-                Season Tire
-            </th>
-            <th>
-                Owner Information
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Deposits) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TireTreadHeight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SeasonTire)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Owner)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "ViewDepositById", new {  depositId = item.Id}) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+ <p>
+     <a asp-action="Create">Create New</a>
+ </p>
+ 
+ <form asp-action="Index" asp-controller="Deposit" method="post">
+
+     <div class="row">
+         
+         <input type="text" asp-for="SearchString" name="searchString" id="searchString"/>
+         <input type="submit" value="Search"/>
+
+     </div>
+     <div class="row">
+         <table class="table">
+             <thead>
+             <tr>
+                 
+                 <th>
+                    Deposit Name
+                 </th>
+                 <th>
+                     Tire Tread Height
+                 </th>
+                 <th>
+                     Season Tire
+                 </th>
+                 <th>
+                     Owner Information
+                 </th>
+                 <th>Action</th>
+             </tr>
+             </thead>
+             <tbody>
+             @foreach (var item in Model.Deposits)
+             {
+                 <tr>
+                     <td>
+                         @Html.DisplayFor(modelItem => item.Name)
+                     </td>
+                     <td>
+                         @Html.DisplayFor(modelItem => item.TireTreadHeight)
+                     </td>
+                     <td>
+                         @Html.DisplayFor(modelItem => item.SeasonTire)
+                     </td>
+                     <td>
+                         @Html.DisplayFor(modelItem => item.Owner)
+                     </td>
+                     <td>
+                         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                         @Html.ActionLink("Details", "ViewDepositById", new { depositId = item.Id }) |
+                         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                     </td>
+                 </tr>
+             }
+             </tbody>
+         </table>
+     </div>
+     
+     <div class="row">
+         
+         <table>
+             <tr>
+                 @for (int i = 1; i < ((Model.Count / (double)Model.PageSize)+1); i++)
+                 {
+                     <td>
+                         @if (i != Model.CurrentPage)
+                         {
+                             <a href="javascript:PageClick(@i)">@i</a>
+                         }
+                         else
+                         {
+                             <span>@i</span>
+                         }
+                     </td>
+                 }
+             </tr>
+         </table>
+
+     </div>
+     <input type="hidden" name="pageNo" id="pageNo"/>
+     <input type="hidden" name="pageSize" id="pageSize" value="4"/>
+ </form>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        function PageClick(index)
+        {
+            document.getElementById("pageNo").value = index;
+            document.forms[0].submit();
+
+        }
+    </script>
 }
-    </tbody>
-</table>

@@ -24,14 +24,20 @@ namespace TireDep.App.Services
 
         }
 
-        public LisOfDepositsForListVm GetAllDepositForList()
+        public LisOfDepositsForListVm GetAllDepositForList(int pageSize, int pageNo, string searchString)
         {
             var deposits = _depositRepository.GetAllActiveDeposits()
+                .Where(p => p.Name.Contains(searchString))
                 .ProjectTo<DepositForListVm>(_mapper.ConfigurationProvider).ToList();
+
+            var depositsToShow = deposits.Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();
 
             var depositList = new LisOfDepositsForListVm()
             {
-                Deposits = deposits,
+                CurrentPage = pageNo,
+                PageSize = pageSize,
+                SearchString = searchString,
+                Deposits = depositsToShow,
                 Count = deposits.Count
             };
 
@@ -39,9 +45,11 @@ namespace TireDep.App.Services
             return depositList;
         }
 
-        public DepositDetailsVm AddDeposit(NewDepositVm newDeposit)
+        public int AddDeposit(NewDepositVm depositToAdd)
         {
-            throw new NotImplementedException();
+            var deposit = _mapper.Map<Deposit>(depositToAdd);
+            var id = _depositRepository.AddDeposit(deposit);
+            return id;
         }
 
 
@@ -80,7 +88,7 @@ namespace TireDep.App.Services
         public DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId)
         {
             
-            var deposits = _depositRepository.GetDepositByOwnerId(ownerId)
+            var deposits = _depositRepository.GetDepositByOwnerId(1)
                 .ProjectTo<DepositByOwnerVm>(_mapper.ConfigurationProvider).ToList();
 
             DepositListByOwnerListForVm result = new DepositListByOwnerListForVm()
@@ -90,6 +98,19 @@ namespace TireDep.App.Services
             };
 
             return result;
+        }
+
+        public DepositListByOwnerListForVm ViewDepositsByOwnerName(string piceOfName)
+        {
+            var deposits = _depositRepository.GetAllDepositsByPiceOfName(piceOfName)
+                .ProjectTo<DepositByOwnerVm>(_mapper.ConfigurationProvider).ToList();
+
+            DepositListByOwnerListForVm listOfDepositsByOwner = new DepositListByOwnerListForVm()
+            {
+                Count = deposits.Count,
+                DepositByOwner = deposits
+            };
+            return listOfDepositsByOwner;
         }
     }
 }

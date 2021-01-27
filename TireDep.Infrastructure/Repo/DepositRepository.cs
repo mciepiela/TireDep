@@ -58,6 +58,12 @@ namespace TireDep.Infrastructure.Repo
             return deposits;
         }
 
+        public IQueryable<Deposit> GetAllDepositsByPiceOfName(string piceOfName)
+        {
+            var deposits = _context.Deposits.Where(n => n.Owner.LastName.Contains(piceOfName));
+            return deposits;
+        }
+
         public Deposit GetDepositById(int depositId)
         {
             var deposit = _context.Deposits.FirstOrDefault(p => p.Id == depositId);

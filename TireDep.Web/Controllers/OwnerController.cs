@@ -16,8 +16,12 @@ namespace TireDep.Web.Controllers
         {
             _ownerService = ownerService;
         }
-        
-        
+
+        public IActionResult GetOwnersList()
+        {
+
+            return View();
+        }
         [HttpGet]
         public IActionResult AddNewOwnerForDeposit(int depositId)
         {
