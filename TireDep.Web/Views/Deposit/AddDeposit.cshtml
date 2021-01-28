@@ -1,4 +1,7 @@
-﻿@model TireDep.App.ViewModels.Deposit.NewDepositVm
+﻿@using TireDep.Domain.Model
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using TireDep.App.ViewModels.Deposit
+@model TireDep.App.ViewModels.Deposit.NewDepositVm
 
 @{
     ViewData["Title"] = "AddDeposit";
@@ -13,8 +16,9 @@
         <form asp-action="AddDeposit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <input type="hidden" asp-for="Id"/>
+                <input type="hidden" asp-for="Id" />
             </div>
+            <h5>DepositDet</h5>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
@@ -25,13 +29,63 @@
                 <input asp-for="TireTreadHeight" class="form-control" />
                 <span asp-validation-for="TireTreadHeight" class="text-danger"></span>
             </div>
+            <div>
+                <select asp-for="TyreSeasonId" asp-items="NewDepositVm.TyreSeasonSelectList" class="form-control" >
+                    <option value="">Tyre Season</option>
+                    
+                    nie zapisuje do bazy danych sezonu opony
+
+                </select>
+            </div>
+            <h5>OwnerDet</h5>
+
             <div class="form-group">
-                <input type="hidden" asp-for="StartDate"  />
+                <label asp-for="Owner.FirstName" class="control-label"></label>
+                <input asp-for="Owner.FirstName" class="form-control" />
+                <span asp-validation-for="Owner.FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Owner.LastName" class="control-label"></label>
+                <input asp-for="Owner.LastName" class="form-control" />
+                <span asp-validation-for="Owner.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="Owner.Id" class="form-control" />
+            </div>
+
+
+
+
+            <h5>ContastDet</h5>
+
+            <div class="form-group">
+                <label asp-for="Owner.Contact.Email" class="control-label"></label>
+                <input asp-for="Owner.Contact.Email" class="form-control" />
+                <span asp-validation-for="Owner.Contact.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Owner.Contact.Tel" class="control-label"></label>
+                <input asp-for="Owner.Contact.Tel" class="form-control" />
+                <span asp-validation-for="Owner.Contact.Tel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Owner.Contact.Id" class="form-control" />
+                <input type="hidden" asp-for="Owner.Contact.OwnerRef" class="form-control" />
+                
+
+            </div>
+
+
+            <div class="form-group">
+                <input type="hidden" asp-for="StartDate" />
+                <input type="hidden" asp-for="IsActive" />
             </div>
             <div class="form-group form-check">
-                
-                    <input type="hidden" asp-for="IsActive" /> 
-                
+
+
+
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

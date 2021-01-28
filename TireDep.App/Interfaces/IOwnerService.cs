@@ -10,6 +10,8 @@ namespace TireDep.App.Interfaces
     {
         OwnerDetailsSummaryVm AddNewOwnerForDeposit(NewOwnerVm newOwner);
         OwnerDetailsVm ViewOwnerById(int id);
+        int AddOwner(NewOwnerVm model);
+        ListForOwnerListVm GetAllOwners();
 
     }
 }

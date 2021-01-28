@@ -26,8 +26,11 @@ namespace TireDep.Infrastructure.Repo
             }
         }
 
-        public int AddDeposit(Deposit depositToAdd)
+        public int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner)
         {
+            
+            _context.Contacts.Add(contact);
+            _context.Owners.Add(owner);
             _context.Deposits.Add(depositToAdd);
             _context.SaveChanges();
             return depositToAdd.Id;

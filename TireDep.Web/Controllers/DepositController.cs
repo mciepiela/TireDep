@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using TireDep.App.Interfaces;
 using TireDep.App.ViewModels.Deposit;
@@ -45,6 +46,8 @@ namespace TireDep.Web.Controllers
         public IActionResult AddDeposit()
         {
             _logger.LogInformation("Dodawanie depozytu");
+            var tyreSeasontype = _depositService.GetSeasonType().SeasonTypeList.ToList();
+            NewDepositVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name" );
             return View(new NewDepositVm());
             
         }
@@ -54,7 +57,7 @@ namespace TireDep.Web.Controllers
         {
             var id = _depositService.AddDeposit(model);
 
-            return View(model);
+            return RedirectToAction("Index", "Deposit");
         }
 
 

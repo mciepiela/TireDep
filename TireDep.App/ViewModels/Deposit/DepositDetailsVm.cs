@@ -28,5 +28,7 @@ namespace TireDep.App.ViewModels.Deposit
             profile.CreateMap<Domain.Model.Deposit, DepositDetailsVm>();
 
         }
+
+
     }
 }

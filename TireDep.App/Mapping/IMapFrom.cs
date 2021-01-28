@@ -8,5 +8,6 @@ namespace TireDep.App.Mapping
     public interface IMapFrom<T>
     {
         void Mapping(Profile profile) => profile.CreateMap(typeof(T), GetType());
+        //void Mapping(NestedProfile nestedProfile);
     }
 }

@@ -13,7 +13,7 @@ namespace TireDep.Domain.Interfaces
         void DeleteDeposit(int depositId);
 
 
-         int AddDeposit(Deposit depositToAdd);
+        int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner);
 
          void UpdateDeposit(Deposit deposit);
 
@@ -33,6 +33,8 @@ namespace TireDep.Domain.Interfaces
         // dodatkowe metody do SeasonTire
 
         IQueryable<SeasonTire> GetAllSeasonTire();
+
+        
         
 
 

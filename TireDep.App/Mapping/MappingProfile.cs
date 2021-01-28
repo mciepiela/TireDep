@@ -4,14 +4,18 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using AutoMapper;
+using TireDep.App.ViewModels.Owner;
+using TireDep.Domain.Model;
 
 namespace TireDep.App.Mapping
 {
-    class MappingProfile : Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {
             ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
+            CreateMap<Owner, NewOwnerVm>();
+            CreateMap<Contact, NewOwnerVm>();
         }
 
         private void ApplyMappingFromAssembly(Assembly assembly)

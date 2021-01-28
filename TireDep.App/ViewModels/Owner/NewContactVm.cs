@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TireDep.App.ViewModels.Owner
 {
-    class OwnersListVm
+    public class NewContactVm
     {
     }
 }

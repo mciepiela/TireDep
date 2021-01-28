@@ -47,34 +47,29 @@ namespace TireDep.App.Services
 
         public int AddDeposit(NewDepositVm depositToAdd)
         {
+            ///////// DOPISAC ARGUMENTY, MAPOWAC Z NEW DEPIST VM NA DEPOSIT
             var deposit = _mapper.Map<Deposit>(depositToAdd);
-            var id = _depositRepository.AddDeposit(deposit);
+
+            var contact = new Contact()
+            {
+                Email = deposit.Owner.Contact.Email,
+                //Id = deposit.Owner.Contact.Id,
+                Owner = deposit.Owner,
+                OwnerRef = deposit.OwnerId,
+                Tel = deposit.Owner.Contact.Tel
+
+            };
+            var owner = new Owner()
+            {
+                Contact = contact,
+                FirstName = deposit.Owner.FirstName,
+                LastName = deposit.Owner.LastName,
+            };
+
+            var id = _depositRepository.AddDeposit(deposit, contact, owner);
             return id;
         }
 
-
-        //public DepositDetailsVm AddDeposit(NewDepositVm newDeposit)
-        //{
-        //    //Deposit depoDet = new Deposit();
-
-        //    //depoDet.Id = newDeposit.Id;
-        //    //depoDet.Name = newDeposit.Name;
-        //    //depoDet.Owner.LastName = newDeposit.Owner.LastName;
-        //    //depoDet.Owner.FirstName = newDeposit.Owner.FirstName;
-        //    //depoDet.TireTreadHeight = newDeposit.TireTreadHeight;
-        //    //depoDet.SeasonTire.Name = newDeposit.SeasonTire.Name;
-        //    //depoDet.IsActive = true;
-        //    //depoDet.StartDate = DateTime.Now;
-          
-
-        //    //DepositDetailsVm details = new DepositDetailsVm();
-            
-        //    //var depoVm = _depositRepository.AddDeposit(depoDet);
-        //    //var depoDomain = _mapper.Map<Deposit>(depoVm);
-        //    //return depoVm;
-
-
-        //}
 
         public DepositDetailsVm ViewDepositById(int depositId)
         {
@@ -111,6 +106,18 @@ namespace TireDep.App.Services
                 DepositByOwner = deposits
             };
             return listOfDepositsByOwner;
+        }
+
+        public ListOfSeasonTypeVm GetSeasonType()
+        {
+            var season = _depositRepository.GetAllSeasonTire().ProjectTo<SeasonTypeForListVm>(_mapper.ConfigurationProvider).ToList();
+
+            ListOfSeasonTypeVm model = new ListOfSeasonTypeVm()
+            {
+                SeasonTypeList = season
+                
+            };
+            return model;
         }
     }
 }

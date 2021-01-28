@@ -15,5 +15,7 @@ namespace TireDep.App.Interfaces
         DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId);
         DepositListByOwnerListForVm ViewDepositsByOwnerName(string ownerName);
 
+        ListOfSeasonTypeVm GetSeasonType();
+
     }
 }

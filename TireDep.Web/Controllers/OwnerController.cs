@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TireDep.App.Interfaces;
+using TireDep.App.ViewModels.Owner;
 
 namespace TireDep.Web.Controllers
 {
@@ -17,10 +18,15 @@ namespace TireDep.Web.Controllers
             _ownerService = ownerService;
         }
 
+        public IActionResult Index()
+        {
+            var list = _ownerService.GetAllOwners();
+            return View(list);
+        }
         public IActionResult GetOwnersList()
         {
-
-            return View();
+           var list = _ownerService.GetAllOwners();
+            return View(list);
         }
         [HttpGet]
         public IActionResult AddNewOwnerForDeposit(int depositId)
@@ -28,6 +34,22 @@ namespace TireDep.Web.Controllers
             
             return View();
         }
+
+        [HttpGet]
+        public IActionResult AddNewOwner()
+        {
+            return View(new NewOwnerVm());
+        }
+
+        [HttpPost]
+        public IActionResult AddNewOwner(NewOwnerVm model)
+        {
+            var id = _ownerService.AddOwner(model);
+            return RedirectToAction("Index","Owner");
+        }
+
+
+
 
         //[HttpPost]
         //        public IActionResult AddNewOwnerForDeposit(OwnerModel model)
