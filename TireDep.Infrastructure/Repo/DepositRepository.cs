@@ -26,11 +26,16 @@ namespace TireDep.Infrastructure.Repo
             }
         }
 
-        public int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner)
+        //public int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner)
+        //{
+        //    _context.Owners.Add(owner);
+        //    _context.Contacts.Add(contact);
+        //    _context.Deposits.Add(depositToAdd);
+        //    _context.SaveChanges();
+        //    return depositToAdd.Id;
+        //}
+        public int AddDeposit(Deposit depositToAdd)
         {
-            
-            _context.Contacts.Add(contact);
-            _context.Owners.Add(owner);
             _context.Deposits.Add(depositToAdd);
             _context.SaveChanges();
             return depositToAdd.Id;
@@ -80,7 +85,5 @@ namespace TireDep.Infrastructure.Repo
             var season = _context.SeasonTires;
             return season;
         }
-
-        
     }
 }

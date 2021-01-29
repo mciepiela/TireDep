@@ -8,11 +8,24 @@ namespace TireDep.App.ViewModels.Owner
 {
     public class OwnerToListVm : IMapFrom<Domain.Model.Owner>
     {
+
         public int Id { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
+
+        public string FullName { get; set; }
         public string ContactInfo { get; set; }
 
+        public OwnerToListVm()
+        {
+            FillFullName();
+        }
+
+        public void FillFullName()
+        {
+            FullName = LastName + " " + FirstName;
+            
+        }
         public void Mapping(MappingProfile profile)
         {
             profile.CreateMap<Domain.Model.Owner, OwnerToListVm>()

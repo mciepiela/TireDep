@@ -22,8 +22,9 @@ namespace TireDep.App.ViewModels.Deposit
         public int TireTreadHeight { get; set; }
 
         public SeasonTire SeasonTire { get; set; }
-
+        public int SeasonTireId { get; set; }
         public  Domain.Model.Owner Owner { get; set; }
+        public int OwnerId { get; set; }
 
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -32,18 +33,24 @@ namespace TireDep.App.ViewModels.Deposit
 
         public bool IsActive { get; set; }
         public virtual ICollection<Domain.Model.Owner> Owners { get; set; }
-        //public virtual ICollection<SeasonTire> SeasonTires { get; set; }
+       
         public virtual ListOfSeasonTypeVm ListSeasonType { get; set; }
 
+        public static SelectList AllOwners { get; set; }
         public static SelectList TyreSeasonSelectList { get; set; }
-        public string TyreSeasonId { get; set; }
+        
 
 
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<NewDepositVm, Domain.Model.Deposit>().ReverseMap();
-            //.ForMember(d=>d.SeasonTire, opt=>opt.MapFrom(s=>s.SeasonTire))
+            profile.CreateMap<NewDepositVm, Domain.Model.Deposit>()
+                .ReverseMap()
+                .ForMember(d=>d.SeasonTire, opt =>opt.Ignore())
+                .ForMember(d=>d.Owner, opt=>opt.Ignore());
+               // .ForPath(d => d.SeasonTire.Name, opt => opt.MapFrom(s => s.SeasonTire.Name))
+               // .ForPath(d => d.SeasonTire.Id, opt => opt.MapFrom(s => s.SeasonTire.Id))
+               // .ForPath(d => d.SeasonTire.Deposits, opt => opt.Ignore());
             // .ForMember(d =>d.Owner, opt => opt.MapFrom(s=>s.Owner));
 
         }
@@ -57,6 +64,7 @@ namespace TireDep.App.ViewModels.Deposit
         private void SetPriceAndEndDate()
         {
             EndDate = null;
+            Price = null;
         }
 
         private void SetActive()

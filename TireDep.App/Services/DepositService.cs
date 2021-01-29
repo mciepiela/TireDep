@@ -47,26 +47,11 @@ namespace TireDep.App.Services
 
         public int AddDeposit(NewDepositVm depositToAdd)
         {
-            ///////// DOPISAC ARGUMENTY, MAPOWAC Z NEW DEPIST VM NA DEPOSIT
+            
             var deposit = _mapper.Map<Deposit>(depositToAdd);
 
-            var contact = new Contact()
-            {
-                Email = deposit.Owner.Contact.Email,
-                //Id = deposit.Owner.Contact.Id,
-                Owner = deposit.Owner,
-                OwnerRef = deposit.OwnerId,
-                Tel = deposit.Owner.Contact.Tel
-
-            };
-            var owner = new Owner()
-            {
-                Contact = contact,
-                FirstName = deposit.Owner.FirstName,
-                LastName = deposit.Owner.LastName,
-            };
-
-            var id = _depositRepository.AddDeposit(deposit, contact, owner);
+         
+            var id = _depositRepository.AddDeposit(deposit);
             return id;
         }
 

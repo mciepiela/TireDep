@@ -13,9 +13,9 @@ namespace TireDep.App.ViewModels.Deposit
         public string Name { get; set; }
         public int TireTreadHeight { get; set; }
 
-        public string SeasonTire { get; set; }
+        public SeasonTire SeasonTire { get; set; }
         
-        public string Owner { get; set; }
+        public Domain.Model.Owner Owner { get; set; }
 
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }

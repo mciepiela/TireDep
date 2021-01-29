@@ -13,9 +13,10 @@ namespace TireDep.Domain.Interfaces
         void DeleteDeposit(int depositId);
 
 
-        int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner);
+       // int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner);
+        int AddDeposit(Deposit depositToAdd);
 
-         void UpdateDeposit(Deposit deposit);
+        void UpdateDeposit(Deposit deposit);
 
 
          IQueryable<Deposit> GetDepositByOwnerId(int ownerId);

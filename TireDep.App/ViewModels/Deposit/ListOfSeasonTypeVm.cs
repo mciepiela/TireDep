@@ -10,4 +10,5 @@ namespace TireDep.App.ViewModels.Deposit
     {
         public IEnumerable<SeasonTypeForListVm> SeasonTypeList { get; set; }
     }
+    
 }

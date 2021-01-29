@@ -15,10 +15,12 @@ namespace TireDep.Web.Controllers
     {
         private readonly IDepositService _depositService;
         private readonly ILogger<DepositController> _logger;
-        public DepositController(IDepositService depositService, ILogger<DepositController> logger)
+        private readonly IOwnerService _ownerService;
+        public DepositController(IDepositService depositService, ILogger<DepositController> logger, IOwnerService ownerService)
         {
             _depositService = depositService;
             _logger = logger;
+            _ownerService = ownerService;
         }
         [HttpGet]
         public IActionResult Index()
@@ -47,6 +49,12 @@ namespace TireDep.Web.Controllers
         {
             _logger.LogInformation("Dodawanie depozytu");
             var tyreSeasontype = _depositService.GetSeasonType().SeasonTypeList.ToList();
+            ViewBag.Seasons = tyreSeasontype;
+
+            var allOwners = _ownerService.GetAllOwners().Owners.ToList();
+            ViewBag.Owners = allOwners;
+      
+            NewDepositVm.AllOwners = new SelectList(allOwners, "Id", "LastName");
             NewDepositVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name" );
             return View(new NewDepositVm());
             
@@ -55,15 +63,21 @@ namespace TireDep.Web.Controllers
         [HttpPost]
         public IActionResult AddDeposit(NewDepositVm model)
         {
+            var SelectedSeason = model.SeasonTireId;
+            ViewBag.SelectedSeason = model.SeasonTireId;
+            var allOwners = _ownerService.GetAllOwners().Owners.ToList();
+          
+            int selectedOwner = model.OwnerId;
+         
             var id = _depositService.AddDeposit(model);
 
-            return RedirectToAction("Index", "Deposit");
+            return RedirectToAction("ViewDepositById", "Deposit", new {id = id});
         }
 
 
-        public IActionResult ViewDepositById(int depositId)
+        public IActionResult ViewDepositById(int id)
         {
-            var model = _depositService.ViewDepositById(depositId);
+            var model = _depositService.ViewDepositById(id);
             return View(model);
         }
 
