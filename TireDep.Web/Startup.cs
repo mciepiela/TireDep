@@ -13,8 +13,11 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.Logging;
 using TireDep.App;
+using TireDep.App.ViewModels.Deposit;
 using TireDep.Domain.Interfaces;
 using TireDep.Infrastructure;
 using TireDep.Infrastructure.Repo;
@@ -41,8 +44,9 @@ namespace TireDep.Web
                 .AddEntityFrameworkStores<Context>();
             services.AddApp();
             services.AddInfrastructure();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddFluentValidation(fv => fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
             services.AddRazorPages();
+            services.AddTransient<IValidator<NewDepositVm>, NewDepositVm.NewDepositValidation>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,89 @@
+﻿@using TireDep.Domain.Model
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using TireDep.App.ViewModels.Deposit
+@model TireDep.App.ViewModels.Deposit.NewDepositVm
+
+@{
+    ViewData["Title"] = "AddDeposit";
+}
+
+<h1>Add Deposit (For NEW User) </h1>
+
+
+
+
+<hr />
+<form asp-action="AddDepositNewUser" method="post" role="form">
+
+
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="StartDate" />
+    <input type="hidden" asp-for="IsActive" />
+    <input type="hidden" asp-for="Owner.Id" class="form-control" />
+    <input type="hidden" asp-for="Owner.Contact.Id" class="form-control" />
+    <input type="hidden" asp-for="Owner.Contact.OwnerRef" class="form-control" />
+
+
+    <div class="row"><div class="col"><h5>Owner</h5></div></div><br/>
+    <div class="row"><div class="col"><h7>Owner Details</h7></div></div>
+    <div class="row">
+        <div class="col">
+            <input asp-for="Owner.FirstName" type="text" class="form-control" placeholder="Owner's First Name" aria-label="Owner Name">
+            <span asp-validation-for="Owner.FirstName"></span>
+        </div>
+        <div class="col">
+            <input asp-for="Owner.LastName" type="text" class="form-control" placeholder="Owner's Last Name" aria-label="Owner First Name">
+            <span asp-validation-for="Owner.LastName"></span>
+            </div>
+    </div>
+    <br/>
+    <div class="row"><div class="col"><h7>Contact Details</h7></div></div>
+    <div class="row">
+        <div class="col">
+            <input asp-for="Owner.Contact.Email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+            <span asp-validation-for="Owner.Contact.Email" ></span>
+            </div>
+        <div class="col">
+            <input asp-for="Owner.Contact.Tel" type="tel" class="form-control" placeholder="Phone" aria-label="Tel">
+            <span asp-validation-for="Owner.Contact.Tel"></span>
+            </div>
+    </div>
+    <br/>
+    <br />
+    <div class="row"><div class="col"><h5>Deposit Details</h5></div></div>
+    <div class="row">
+        <div class="col">
+            <input asp-for="Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="col" align="center">
+            <label class="form-label" for="tread">Tire Tread Height</label><br />
+            <input asp-for="TireTreadHeight" type="range" class="form-range" min="0" max="10" step="1" id="tread">
+            <span asp-validation-for="TireTreadHeight"></span>
+        </div>
+        <div class="col">
+            
+            <select class="form-control" asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
+
+        </div>
+    </div>
+    <br />
+
+
+    <div class="form-group form-check">
+
+    </div>
+    <div class="form-group ">
+        <input type="submit" value="Add Deposit" class="btn btn-primary" />
+    </div>
+ 
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

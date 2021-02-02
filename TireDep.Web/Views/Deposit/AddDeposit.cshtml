@@ -26,14 +26,15 @@
     <div class="row"><div class="col"><h5>Deposit Details</h5></div></div>
     <div class="row">
         <div class="col">
-            <input asp-for="Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme">
+            <input asp-for="Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme" >
+            <span asp-validation-for="Name"></span>
         </div>
         <div class="col">
             <input asp-for="TireTreadHeight" type="text" class="form-control" placeholder="Tire Tread Height" aria-label="Tire Tread Height">
+            <span asp-validation-for="TireTreadHeight"></span>
         </div>
         <div class="col">
             <select class="form-control" asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
-
         </div>
     </div>
     <br />
@@ -54,98 +55,7 @@
 </form>
 
 
-<!--
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="AddDeposit" method="post" role="form">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <input type="hidden" asp-for="Id" />
-            </div>
-            <h6>DepositDet</h6>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TireTreadHeight" class="control-label"></label>
-                <input asp-for="TireTreadHeight" class="form-control" />
-                <span asp-validation-for="TireTreadHeight" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <select asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))"></select>
-            </div>
-            <h6>OwnerDet</h6>
-
-            
-
-                <div class="form-group">
-                    <select asp-for="OwnerId" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))"></select>
-                </div>
-            
-            
-
-
-
-    <div>
-            <label asp-for="OwnerId" class="control-label"></label>
-        </div>
-        <label asp-for="Owner.FirstName" class="control-label"></label>
-        <input asp-for="Owner.FirstName" class="form-control"/>
-        <span asp-validation-for="Owner.FirstName" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Owner.LastName" class="control-label"></label>
-        <input asp-for="Owner.LastName" class="form-control" />
-        <span asp-validation-for="Owner.LastName" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <input type="hidden" asp-for="Owner.Id" class="form-control" />
-    </div>
-
-
-
-
-    <h5>ContastDet</h5>
-
-    <div class="form-group">
-        <label asp-for="Owner.Contact.Email" class="control-label"></label>
-        <input asp-for="Owner.Contact.Email" class="form-control" />
-        <span asp-validation-for="Owner.Contact.Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Owner.Contact.Tel" class="control-label"></label>
-        <input asp-for="Owner.Contact.Tel" class="form-control" />
-        <span asp-validation-for="Owner.Contact.Tel" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="hidden" asp-for="Owner.Contact.Id" class="form-control" />
-        <input type="hidden" asp-for="Owner.Contact.OwnerRef" class="form-control" />
-
-
-    </div>
-           
-
-                <div class="form-group">
-                    <input type="hidden" asp-for="StartDate" />
-                    <input type="hidden" asp-for="IsActive" />
-                </div>
-                <div class="form-group form-check">
-
-
-
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-</form>
-    </div>
-</div>
-                -->
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

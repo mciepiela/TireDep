@@ -42,37 +42,73 @@ namespace TireDep.Web.Controllers
 
 
 
-
-
         [HttpGet]
-        public IActionResult AddDeposit()
+        public IActionResult AddDeposit() // for old user
         {
+        
             _logger.LogInformation("Dodawanie depozytu");
             var tyreSeasontype = _depositService.GetSeasonType().SeasonTypeList.ToList();
             ViewBag.Seasons = tyreSeasontype;
-
+            NewDepositVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name");
+            
             var allOwners = _ownerService.GetAllOwners().Owners.ToList();
             ViewBag.Owners = allOwners;
-      
             NewDepositVm.AllOwners = new SelectList(allOwners, "Id", "LastName");
-            NewDepositVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name" );
+            
             return View(new NewDepositVm());
             
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult AddDeposit(NewDepositVm model)
         {
-            var SelectedSeason = model.SeasonTireId;
-            ViewBag.SelectedSeason = model.SeasonTireId;
-            var allOwners = _ownerService.GetAllOwners().Owners.ToList();
-          
-            int selectedOwner = model.OwnerId;
-         
-            var id = _depositService.AddDeposit(model);
 
-            return RedirectToAction("ViewDepositById", "Deposit", new {id = id});
+            if (ModelState.IsValid)
+            {
+                var SelectedSeason = model.SeasonTireId;
+                ViewBag.SelectedSeason = model.SeasonTireId;
+                var allOwners = _ownerService.GetAllOwners().Owners.ToList();
+                int selectedOwner = model.OwnerId;
+                var id = _depositService.AddDeposit(model);
+                return RedirectToAction("ViewDepositById", "Deposit", new { id = id });
+            }
+            else
+            {
+                return View(model);
+            }
+
+           
         }
+
+        // Add Deposit for NewUser
+        [HttpGet]
+        public IActionResult AddDepositNewUser() 
+        {
+            _logger.LogInformation("Dodawanie depozytu dla nowego klienta");
+            var tyreSeasontype = _depositService.GetSeasonType().SeasonTypeList.ToList();
+            ViewBag.Seasons = tyreSeasontype;
+            NewDepositVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name");
+            return View(new NewDepositVm());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult AddDepositNewUser(NewDepositVm model)
+        {
+            //if (ModelState.IsValid)
+            //{
+                var SelectedSeason = model.SeasonTireId;
+                ViewBag.SelectedSeason = model.SeasonTireId;
+                var id = _depositService.AddDeposit(model);
+                return RedirectToAction("ViewDepositById", "Deposit", new { id = id });
+        //}
+            //else
+            //{
+            //    return View(model);
+            //}
+}
 
 
         public IActionResult ViewDepositById(int id)
