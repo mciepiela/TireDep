@@ -11,11 +11,13 @@ namespace TireDep.App.Interfaces
     {
         LisOfDepositsForListVm GetAllDepositForList(int pageSize, int pageNo, string searchString);
         int AddDeposit(NewDepositVm newDeposit);
-        DepositDetailsVm ViewDepositById(int depositId);
+        DepositDetVm ViewDepositById(int depositId);
         DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId);
         DepositListByOwnerListForVm ViewDepositsByOwnerName(string ownerName);
 
         ListOfSeasonTypeVm GetSeasonType();
 
+        NewDepositVm GetDepositToEdit(int id);
+        void UpdateDeposit(NewDepositVm depostToEdit);
     }
 }

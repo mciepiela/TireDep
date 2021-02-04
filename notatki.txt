@@ -92,3 +92,44 @@ nie dzia³a mapowanie w AddNewDeposit = problem z owner i tireseason - klucze obc
     </div>
 </div>
                 -->
+
+
+                    <div class="row mt-3 centrowanie">
+        <div class="col-12 centrowanie"><div class="deposit-second">Deposit Information</div></div>
+
+        <div class="col-md-3">Season</div>
+        <div class="col-md-9">@Html.DisplayFor(model => model.SeasonTire.Name)</div>
+
+        <div class="col-md-3">Tire Tread</div>
+        <div class="col-md-9">@Html.DisplayFor(model => model.TireTreadHeight)</div>
+    </div>
+
+    <div class="row mt-3 centrowanie">
+        <div class="col-12"><div class="deposit-second">Owner Information</div></div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-3">Imiê i Nazwisko</div>
+        <div class="col-md-9">
+            @Html.DisplayFor(model => model.Owner.LastName)
+            @Html.DisplayFor(model => model.Owner.FirstName)
+        </div>
+
+        <div class="col-md-3">Telefon</div>
+        <div class="col-md-9">@Html.DisplayFor(model => model.Owner.Contact.Tel)</div>
+
+        <div class="col-md-3">Email</div>
+        <div class="col-md-9">@Html.DisplayFor(model => model.Owner.Contact.Email)</div>
+    </div>
+
+
+    <div class="row mt-3 centrowanie">
+        <div class="col-12"><div class="deposit-second">$$$</div></div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4">Start</div>
+        <div class="col-md-4">End</div>
+        <div class="col-md-4">Price</div>
+        <div class="col-md-4">@Html.DisplayFor(model => model.StartDate)</div>
+        <div class="col-md-4">@Html.DisplayFor(model => model.EndDate)</div>
+        <div class="col-md-4">@Html.DisplayFor(model => model.Price)</div>
+    </div>

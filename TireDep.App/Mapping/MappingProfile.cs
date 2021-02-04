@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using AutoMapper;
+using TireDep.App.ViewModels.Deposit;
 using TireDep.App.ViewModels.Owner;
 using TireDep.Domain.Model;
 
@@ -16,6 +17,12 @@ namespace TireDep.App.Mapping
             ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
             CreateMap<Owner, NewOwnerVm>();
             CreateMap<Contact, NewOwnerVm>();
+            CreateMap<Deposit, DepositDetailsVm>();
+            CreateMap<Owner, DepositDetailsVm>();
+            CreateMap<Contact, DepositDetailsVm>();
+            CreateMap<Deposit, DepositDetVm>();
+           
+
         }
 
         private void ApplyMappingFromAssembly(Assembly assembly)

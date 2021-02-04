@@ -49,17 +49,30 @@ namespace TireDep.App.Services
         {
             
             var deposit = _mapper.Map<Deposit>(depositToAdd);
-
-         
             var id = _depositRepository.AddDeposit(deposit);
             return id;
         }
 
 
-        public DepositDetailsVm ViewDepositById(int depositId)
+        public DepositDetVm ViewDepositById(int depositId)
         {
-            var deposit =_depositRepository.GetDepositById(depositId);
-            var depositVm = _mapper.Map<DepositDetailsVm>(deposit);
+            var deposit = _depositRepository.GetDepositById(depositId);
+            DepositDetVm depositVm = new DepositDetVm();
+            //depositVm.SeasonTire = deposit.SeasonTire.Name;
+            //depositVm.Id = deposit.Id;
+            //depositVm.Name = deposit.Name;
+            //depositVm.TireTreadHeight = deposit.TireTreadHeight;
+            //depositVm.SeasonTire = deposit.SeasonTire.Name;
+            //depositVm.OwnerFullName = deposit.Owner.LastName;
+            //depositVm.OwnerEmail = deposit.Owner.Contact.Email;
+            //depositVm.OwnerTel = deposit.Owner.Contact.Tel;
+            //depositVm.StartDate = deposit.StartDate.Date;
+            //depositVm.EndDate = deposit.EndDate.Value.Date;
+            //depositVm.Price = deposit.Price.Value;
+            
+
+            //var depositVm = _mapper.Map<Deposit, DepositDetVm>(deposit);
+                //poprawic mapowanie
             return depositVm;
 
 
@@ -103,6 +116,21 @@ namespace TireDep.App.Services
                 
             };
             return model;
+        }
+
+        public NewDepositVm GetDepositToEdit(int id)
+        {
+            var depositToEdit = _depositRepository.GetDepositById(id);
+            var depositVm = _mapper.Map<NewDepositVm>(depositToEdit);
+            return depositVm;
+
+        }
+
+        public void UpdateDeposit(NewDepositVm depostToEdit)
+        {
+            var deposit = _mapper.Map<Deposit>(depostToEdit);
+            _depositRepository.UpdateDeposit(deposit);
+
         }
     }
 }

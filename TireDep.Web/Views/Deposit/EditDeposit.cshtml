@@ -1,0 +1,68 @@
+﻿@model TireDep.App.ViewModels.Deposit.NewDepositVm
+
+@{
+    ViewData["Title"] = "EditDeposit";
+}
+
+<h1>EditDeposit</h1>
+
+<h4>NewDepositVm</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditDeposit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Id" class="form-control" />
+                <input type="hidden" class="form-check-input" asp-for="IsActive" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TireTreadHeight" class="control-label"></label>
+                <input asp-for="TireTreadHeight" class="form-control" />
+                <span asp-validation-for="TireTreadHeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select class="form-control" asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
+                <input type="hidden" asp-for="SeasonTireId" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Owner" class="control-label"></label>
+                <select class="form-control" asp-for="OwnerId" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))" placeholder="Owner" aria-label="Owner"></select>
+                <input type="hidden" asp-for="OwnerId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                
+                  
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

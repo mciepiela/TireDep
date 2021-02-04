@@ -1,27 +1,53 @@
-﻿@model TireDep.App.ViewModels.Deposit.DepositDetailsVm
+﻿
+@model TireDep.App.ViewModels.Deposit.DepositDetVm
 
 @{
     ViewData["Title"] = "ViewDepositById";
 }
 
-<h1>View Deposit By Id</h1>
 
-<div>
-    <h4>Deposit: @Html.DisplayFor(model => model.Name)</h4>
-    <hr />
-    <div class="row">
-        ID: @Html.DisplayFor(model => model.Id)<br />
-        Name: @Html.DisplayFor(model => model.Name)<br />
-        Tire Tread Height: @Html.DisplayFor(model => model.TireTreadHeight)<br />
-        Season: @Html.DisplayFor(model => model.SeasonTire.Name)<br /><br />
-        Owner: @Html.DisplayFor(model => model.Owner.LastName)<br /><br />
-        Start Date: @Html.DisplayFor(model => model.StartDate)<br />
-        End Date: @Html.DisplayFor(model => model.EndDate)<br /><br />
-        IsActive: @Html.DisplayFor(model => model.IsActive)<br />
-        Price: @Html.DisplayFor(model => model.Price)<br />
+
+
+<main class="container">
+    <div class="row mt-3 centrowanie">
+        <div class="col-12"><h5>View Deposit By Id</h5></div>
+        <div class="col-12">
+            <div class="deposit-main shadow p-3 mb-5 bg-white rounded">
+                ID: @Html.DisplayFor(model => model.Id) [ @Html.DisplayFor(model => model.Name) ]
+
+            </div>
+        </div>
     </div>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+    
+    <div class="container-md">
+        <div class="row">
+            <div class="col-sm"> <div class="gora-boxa">Deposit</div> </div>
+            <div class="col-5"> <div class="gora-boxa">Owner</div> </div>
+            <div class="col-sm"> <div class="gora-boxa">$$$</div> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm"> <div class="dol-boxa">Season: @Html.DisplayFor(model => model.SeasonTire)  <br />@Html.DisplayFor(model => model.TireTreadHeight)</div> </div>
+            <div class="col-5">  <div class="dol-boxa">
+
+                @Html.DisplayFor(model => model.OwnerFullName)
+                <br />
+                @Html.DisplayFor(model => model.OwnerEmail)
+                <br />
+                @Html.DisplayFor(model => model.OwnerTel)
+            </div> </div>
+            <div class="col-sm">  <div class="dol-boxa">
+                @Html.DisplayFor(model => model.StartDate) - @Html.DisplayFor(model => model.EndDate) (TOTAL 121 day)
+                <br /> @Html.DisplayFor(model => model.Price) 
+            </div> </div>
+        </div>
+    </div>
+
+    <div class="row mt-3 centrowanie">
+        <div class="col-12"><div class="deposit-action shadow p-3 mb-5 bg-white rounded">Edytuj, Usuń, Zakończ</div></div>
+    </div>
+    
+    
+    
+
+</main>
+
