@@ -23,11 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.Infrastructure", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TireDep.Tests", "TireDep.Tests\TireDep.Tests.csproj", "{2CD65205-2D2F-47BD-AA94-41EE958D3F45}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lol", "lol", "{AB401631-8F2E-4A2B-AC8E-DE67B9C7CE62}"
-	ProjectSection(SolutionItems) = preProject
-		notatki.txt = notatki.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
