@@ -47,6 +47,20 @@ namespace TireDep.Web
             services.AddControllersWithViews().AddFluentValidation(fv => fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
             services.AddRazorPages();
             services.AddTransient<IValidator<NewDepositVm>, NewDepositVm.NewDepositValidation>();
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 5;
+
+                options.SignIn.RequireConfirmedEmail = false;
+                options.User.RequireUniqueEmail = true;
+            });
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection = Configuration.GetSection("Authentication:Google");
+                options.ClientId = googleAuthNSection["ClientId"];
+                options.ClientSecret = googleAuthNSection["ClientSecret"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
