@@ -15,12 +15,9 @@ namespace TireDep.App.Mapping
         public MappingProfile()
         {
             ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
-            CreateMap<Owner, NewOwnerVm>();
-            CreateMap<Contact, NewOwnerVm>();
-            CreateMap<Deposit, DepositDetailsVm>();
-            CreateMap<Owner, DepositDetailsVm>();
-            CreateMap<Contact, DepositDetailsVm>();
-            CreateMap<Deposit, DepositDetVm>();
+            //CreateMap<Owner, NewOwnerVm>();
+            //CreateMap<Contact, NewOwnerVm>();
+          
            
 
         }

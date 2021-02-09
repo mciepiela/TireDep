@@ -6,70 +6,64 @@
 
  <h1>List of active Deposits</h1>
 
- <p>
-     <a asp-action="Create">Create New</a>
- </p>
+
  
  <form asp-action="Index" asp-controller="Deposit" method="post">
 
-     <div class="row">
-         
-         <input type="text" asp-for="SearchString" name="searchString" id="searchString"/>
-         <input type="submit" value="Search"/>
 
-     </div>
+
      <div class="row">
          <table class="table">
              <thead>
-             <tr>
-                 
-                 <th>
-                    Deposit Name
-                 </th>
-                 <th>
-                     Tire Tread Height
-                 </th>
-                 <th>
-                     Season Tire
-                 </th>
-                 <th>
-                     Owner Information
-                 </th>
-                 <th>Action</th>
-             </tr>
+                 <tr>
+
+                     <th>
+                         Deposit Name
+                     </th>
+                     <th>
+                         Tire Tread Height
+                     </th>
+                     <th>
+                         Season Tire
+                     </th>
+                     <th>
+                         Owner Information
+                     </th>
+                     <th>Action</th>
+                 </tr>
              </thead>
              <tbody>
-             @foreach (var item in Model.Deposits)
-             {
-                 <tr>
-                     <td>
-                         @Html.DisplayFor(modelItem => item.Name)
-                     </td>
-                     <td>
-                         @Html.DisplayFor(modelItem => item.TireTreadHeight)
-                     </td>
-                     <td>
-                         @Html.DisplayFor(modelItem => item.SeasonTire)
-                     </td>
-                     <td>
-                         @Html.DisplayFor(modelItem => item.Owner)
-                     </td>
-                     <td>
-                         @Html.ActionLink("Edit", "EditDeposit", new { id = item.Id }) |
-                         @Html.ActionLink("Details", "ViewDepositById", new { id = item.Id }) |
-                         @Html.ActionLink("Delete", "DeleteDeposit", new { id = item.Id })
-                     </td>
-                 </tr>
-             }
+                 @foreach (var item in Model.Deposits)
+                 {
+                     <tr>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.Name)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.TireTreadHeight)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.SeasonTire)
+                         </td>
+                         <td>
+                             @Html.DisplayFor(modelItem => item.Owner)
+                         </td>
+                         <td>
+                             @Html.ActionLink("Edit", "EditDeposit", new { id = item.Id }) |
+                             @Html.ActionLink("Details", "ViewDepositById", new { id = item.Id }) |
+                             @Html.ActionLink("Return Deposit", "ReturnDep", new { id = item.Id })
+                         </td>
+                     </tr>
+                 }
              </tbody>
          </table>
      </div>
-     
+
      <div class="row">
-         
+
          <table>
              <tr>
-                 @for (int i = 1; i < ((Model.Count / (double)Model.PageSize)+1); i++)
+                 @for (int i = 1; i < ((Model.Count / (double)Model.PageSize) + 1); i++)
                  {
                      <td>
                          @if (i != Model.CurrentPage)
@@ -86,8 +80,29 @@
          </table>
 
      </div>
-     <input type="hidden" name="pageNo" id="pageNo"/>
-     <input type="hidden" name="pageSize" id="pageSize" value="4"/>
+     <input type="hidden" name="pageNo" id="pageNo" />
+     <input type="hidden" name="pageSize" id="pageSize" value="4" />
+
+
+
+     <div class="row centrowanie ">
+
+         <div class="col-4 searchbox">
+             <input class="form-control" type="text" asp-for="SearchString" name="searchString" id="searchString" placeholder="Search by deposit Name" />
+
+         </div>
+         <div class="col-1"><input class="btn btn-danger" type="submit" value="Search" /></div>
+
+         <div class="col-2"></div>
+
+         <div class="col-4 searchbox">
+             <input class="form-control" type="text" asp-for="SearchStringOwnerName" name="SearchStringOwnerName" id="SearchStringOwnerName" placeholder="Search by Owner" />
+         </div> <div class="col-1"><input class="btn btn-danger" type="submit" value="Search" /></div>
+
+
+         
+     </div>
+
  </form>
 
 @section Scripts

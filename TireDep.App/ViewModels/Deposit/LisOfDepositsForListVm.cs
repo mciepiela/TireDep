@@ -10,6 +10,7 @@ namespace TireDep.App.ViewModels.Deposit
         public int Count { get; set; }
         public int CurrentPage { get; set; }
         public int PageSize { get; set; }
+        public string SearchStringOwnerName { get; set; }
         public string SearchString { get; set; }
 
     }

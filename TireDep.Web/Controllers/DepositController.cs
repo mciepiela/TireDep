@@ -28,23 +28,21 @@ namespace TireDep.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var model = _depositService.GetAllDepositForList(4, 1, "");
+            var model = _depositService.GetAllDepositForList(4, 1, "", "");
             _logger.LogInformation("wyświtlenie indexu");
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Index(int pageSize, int? pageNo, string searchString)
+        public IActionResult Index(int pageSize, int? pageNo, string searchString, string searchStringOwnerName)
         {
             _logger.LogInformation("Uzycie stronnicowania lub searchbox");
             pageNo ??= 1;
             searchString ??= String.Empty;
-            var model = _depositService.GetAllDepositForList(pageSize, pageNo.Value, searchString);
+            searchStringOwnerName ??= String.Empty;
+            var model = _depositService.GetAllDepositForList(pageSize, pageNo.Value, searchString, searchStringOwnerName);
             return View(model);
         }
-
-
-
 
         [HttpGet]
         public IActionResult AddDeposit() // for old user
@@ -127,19 +125,7 @@ namespace TireDep.Web.Controllers
             return View(model);
         }
 
-        [HttpGet]
-        public IActionResult SearchDepositsByOwnerName()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        public IActionResult DepositsByOwnerName(string searchString)
-        {
-            var listOfDepositsByOwnerName = _depositService.ViewDepositsByOwnerName(searchString);
-
-            return View(listOfDepositsByOwnerName);
-        }
 
         [HttpGet]
         public IActionResult EditDeposit(int id)
@@ -176,5 +162,15 @@ namespace TireDep.Web.Controllers
 
 
         }
+
+        public IActionResult ReturnDep(int id)
+        {
+            var model = _depositService.GetDepToReturn(id);
+            _depositService.ReturnDeposit(model);
+            return RedirectToAction("ViewDepositById", "Deposit", new { id = model.Id });
+        }
+
+
+      
     }
 }

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace TireDep.Domain.Model
 {
     public class Deposit
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
         public string Name { get; set; }
         public int TireTreadHeight { get; set; }
@@ -20,7 +23,7 @@ namespace TireDep.Domain.Model
         public DateTime? EndDate { get; set; }
 
         public bool IsActive { get; set; }
-        public int? Price { get; set; }
+        public double? Price { get; set; }
     }
 }
  

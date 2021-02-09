@@ -34,11 +34,7 @@ namespace TireDep.Domain.Interfaces
         // dodatkowe metody do SeasonTire
 
         IQueryable<SeasonTire> GetAllSeasonTire();
-
-        
-        
-
-
+        SeasonTire GetSeason(int seasonTireId);
     }
 
 

@@ -19,8 +19,6 @@ namespace TireDep.App.ViewModels.Deposit
         {
             SetActive();
             SetStartDate();
-
-            
         }
 
         [Required]

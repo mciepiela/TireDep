@@ -10,7 +10,7 @@
 
 <main class="container">
     <div class="row mt-3 centrowanie">
-        <div class="col-12"><h5>View Deposit By Id</h5></div>
+        <div class="col-12"><h7>View Deposit By Id</h7></div>
         <div class="col-12">
             <div class="deposit-main shadow p-3 mb-5 bg-white rounded">
                 ID: @Html.DisplayFor(model => model.Id) [ @Html.DisplayFor(model => model.Name) ]
@@ -18,36 +18,72 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container-md">
         <div class="row">
-            <div class="col-sm"> <div class="gora-boxa">Deposit</div> </div>
-            <div class="col-5"> <div class="gora-boxa">Owner</div> </div>
-            <div class="col-sm"> <div class="gora-boxa">$$$</div> </div>
+            <div class="col-sm"> <div class="gora-boxa shadow-sm p-3 mb-2  rounded">Deposit</div> </div>
+            <div class="col-5"> <div class="gora-boxa shadow-sm p-3 mb-2  rounded">Owner</div> </div>
+            <div class="col-sm"> <div class="gora-boxa shadow-sm p-3 mb-2  rounded">Deposit Timeline</div> </div>
         </div>
         <div class="row">
-            <div class="col-sm"> <div class="dol-boxa">Season: @Html.DisplayFor(model => model.SeasonTire)  <br />@Html.DisplayFor(model => model.TireTreadHeight)</div> </div>
-            <div class="col-5">  <div class="dol-boxa">
+            <div class="col-sm"> <div class="dol-boxa shadow-sm p-3 mb-5 bg-white rounded"><strong>Season:</strong> @Html.DisplayFor(model => model.SeasonTire)  <br /><strong>Tire Tread Height:</strong> @Html.DisplayFor(model => model.TireTreadHeight)</div> </div>
+            <div class="col-5">
+                <div class="dol-boxa shadow-sm p-3 mb-5 bg-white rounded">
 
-                @Html.DisplayFor(model => model.OwnerFullName)
-                <br />
-                @Html.DisplayFor(model => model.OwnerEmail)
-                <br />
-                @Html.DisplayFor(model => model.OwnerTel)
-            </div> </div>
-            <div class="col-sm">  <div class="dol-boxa">
-                @Html.DisplayFor(model => model.StartDate) - @Html.DisplayFor(model => model.EndDate) (TOTAL 121 day)
-                <br /> @Html.DisplayFor(model => model.Price) 
-            </div> </div>
+                    @Html.DisplayFor(model => model.OwnerFullName)
+                    <br />
+                    @Html.DisplayFor(model => model.OwnerEmail)
+                    <br />
+                    @Html.DisplayFor(model => model.OwnerTel)
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="dol-boxa shadow-sm p-3 mb-5 bg-white rounded">
+                    @Html.DisplayFor(model => model.StartDate)
+
+                    @if (Model.Price != null)
+                    {
+                        <span> - </span>
+                        @Html.DisplayFor(model => model.EndDate);
+                        <br /> <span>Total Price:</span>
+
+                        @Html.DisplayFor(model => model.Price);
+
+                    }
+
+
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="row mt-3 centrowanie">
-        <div class="col-12"><div class="deposit-action shadow p-3 mb-5 bg-white rounded">Edytuj, Usuń, Zakończ</div></div>
+        <div class="col-12">
+            <div class="deposit-action shadow p-3 mb-5 bg-white rounded">
+                <div class="d-grid gap-10 col-6 mx-auto">
+                    
+                    @if (Model.Price != null)
+                    {
+                        <h5><strong>This deposit has been returned on @ViewData.Model.EndDate </strong></h5>
+                        <input class="btn btn-info" type="button" value="Print Summary" onclick="location.href = '@Url.Action("PrintSummary", "Deposit",new { id = Model.Id })'" />
+                        
+                    }
+                    else
+                    {
+                
+                <input class="btn btn-info" type="button" value="Edit Deposit" onclick="location.href = '@Url.Action("EditDeposit", "Deposit",new { id = Model.Id })'" />
+                        <input class="btn btn-danger" type="button" value="Return Deposit better" onclick="location.href = '@Url.Action("ReturnDep", "Deposit",new { id = Model.Id })'" />
+
+                    }
+
+                </div>
+
+            </div>
+        </div>
     </div>
-    
-    
-    
+
+
+   
 
 </main>
 

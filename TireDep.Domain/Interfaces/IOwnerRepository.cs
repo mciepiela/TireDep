@@ -36,5 +36,7 @@ namespace TireDep.Domain.Interfaces
 
 
         IQueryable<Contact> ReturnContactByOwnerId(int ownerId);
+        Owner GetOwner(int ownerId);
+        Contact GetContact(int ownerRef);
     }
 }

@@ -59,8 +59,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Open Sans', sans-serif
 }
 .footer {
   position: absolute;
@@ -72,9 +73,9 @@ body {
 /*ovverride bootstrap*/
 
 .deposit-main {
-    font-size: 22px;
-    font-weight: bold;
-    color: black;
+    font-size: 28px;
+    font-weight:bolder;
+    color: #393991;
     text-align: center;
     padding: 20px;
 }
@@ -99,10 +100,19 @@ body {
 }
 
 .centrowanie {
-    align-content: center;
+    display: flex;
+    padding: 30px;
+    -o-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -webkit-align-items: center;
+    align-items: center
 }
+
 .gora-boxa {
-    background-color:#007ec2;
+    background-color: #393991;
     color: white;
     margin-right: 10px;
     margin-left: 10px;
@@ -125,10 +135,15 @@ body {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     text-align: center;
+    height: 200px;
 
 }
 .upbar {
-    background-color: yellow;
-    height: 5px;
+    background-color: #393991;
+    height: 9px;
     width: 100%;
+}
+
+.searchbox {
+    padding: 10px;
 }

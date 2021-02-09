@@ -86,7 +86,16 @@ namespace TireDep.Infrastructure.Repo
             return contacts;
         }
 
+        public Owner GetOwner(int ownerId)
+        {
+            var owner = _context.Owners.FirstOrDefault(predicate => predicate.Id == ownerId);
+            return owner;
+        }
 
-
+        public Contact GetContact(int ownerRef)
+        {
+            var contact = _context.Contacts.FirstOrDefault(p => p.OwnerRef == ownerRef);
+            return contact;
+        }
     }
 }

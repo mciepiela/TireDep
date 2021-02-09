@@ -16,16 +16,6 @@ namespace TireDep.App.ViewModels.Owner
         public string FullName { get; set; }
         public string ContactInfo { get; set; }
 
-        public OwnerToListVm()
-        {
-            FillFullName();
-        }
-
-        public void FillFullName()
-        {
-            FullName = LastName + " " + FirstName;
-            
-        }
         public void Mapping(MappingProfile profile)
         {
             profile.CreateMap<Domain.Model.Owner, OwnerToListVm>()
@@ -33,7 +23,7 @@ namespace TireDep.App.ViewModels.Owner
                 .ForMember(d => d.Id, opt => opt.MapFrom(s => s.Id))
                 .ForMember(d => d.LastName, opt => opt.MapFrom(s => s.LastName))
                 .ForMember(d => d.FirstName, opt => opt.MapFrom(s => s.FirstName))
-                .ForMember(d => d.ContactInfo, opt => opt.MapFrom(s => s.Contact.Email));
+                .ForMember(d => d.ContactInfo, opt => opt.MapFrom(s => s.Contact.Email + " " + s.Contact.Tel ));
         }
     }
 }

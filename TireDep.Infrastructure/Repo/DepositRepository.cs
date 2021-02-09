@@ -26,14 +26,6 @@ namespace TireDep.Infrastructure.Repo
             }
         }
 
-        //public int AddDeposit(Deposit depositToAdd, Contact contact, Owner owner)
-        //{
-        //    _context.Owners.Add(owner);
-        //    _context.Contacts.Add(contact);
-        //    _context.Deposits.Add(depositToAdd);
-        //    _context.SaveChanges();
-        //    return depositToAdd.Id;
-        //}
         public int AddDeposit(Deposit depositToAdd)
         {
             _context.Deposits.Add(depositToAdd);
@@ -43,10 +35,13 @@ namespace TireDep.Infrastructure.Repo
 
         public void UpdateDeposit(Deposit deposit)
         {
+
             _context.Deposits.Update(deposit);
             _context.SaveChanges();
 
+
         }
+
 
         public IQueryable<Deposit> GetDepositByOwnerId(int ownerId)
         {
@@ -83,6 +78,12 @@ namespace TireDep.Infrastructure.Repo
         public IQueryable<SeasonTire> GetAllSeasonTire()
         {
             var season = _context.SeasonTires;
+            return season;
+        }
+
+        public SeasonTire GetSeason(int seasonTireId)
+        {
+            var season = _context.SeasonTires.FirstOrDefault(p=>p.Id == seasonTireId);
             return season;
         }
     }
