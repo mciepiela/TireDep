@@ -60,6 +60,7 @@ namespace TireDep.App.ViewModels.Deposit
             {
                 RuleFor(v => v.Name).Length(3, 255).WithMessage("name");
                 RuleFor(v => v.TireTreadHeight).Cascade(CascadeMode.Stop).NotNull().LessThanOrEqualTo(10).GreaterThanOrEqualTo(0).WithMessage("bieżnik");
+                
 
                 //RuleFor(v => v.Owner.FirstName).NotEmpty();
                 //RuleFor(v => v.Owner.LastName).NotEmpty();

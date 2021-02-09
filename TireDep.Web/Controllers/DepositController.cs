@@ -101,7 +101,7 @@ namespace TireDep.Web.Controllers
         {
             //if (ModelState.IsValid)
             //{
-            var SelectedSeason = model.SeasonTireId;
+                var SelectedSeason = model.SeasonTireId;
             ViewBag.SelectedSeason = model.SeasonTireId;
             var id = _depositService.AddDeposit(model);
             return RedirectToAction("ViewDepositById", "Deposit", new {id = id});

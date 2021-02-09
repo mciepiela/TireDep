@@ -9,5 +9,10 @@ namespace TireDep.App.Services
     {
         public static double DailyRate = 25;
 
+        public static double SetDailyRate(double value)
+        {
+            DailyRate = value;
+            return DailyRate;
+        }
     }
 }
