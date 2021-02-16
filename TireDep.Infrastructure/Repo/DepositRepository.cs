@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TireDep.Domain.Interfaces;
 using TireDep.Domain.Model;
 
@@ -85,6 +87,12 @@ namespace TireDep.Infrastructure.Repo
         {
             var season = _context.SeasonTires.FirstOrDefault(p=>p.Id == seasonTireId);
             return season;
+        }
+
+        //API
+        public async Task<IEnumerable<Deposit>> ListAsync()
+        {
+            return await _context.Deposits.ToListAsync();
         }
     }
 }

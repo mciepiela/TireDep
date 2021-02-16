@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using TireDep.App.Interfaces;
@@ -12,7 +13,7 @@ using TireDep.Domain.Model;
 
 namespace TireDep.App.Services
 {
-    class DepositService : IDepositService
+    public class DepositService : IDepositService
     {
         private readonly IDepositRepository _depositRepository; // przekazuje interfejs zamiast samego repository.
         private readonly IMapper _mapper; // interfejs automapera
@@ -168,10 +169,13 @@ namespace TireDep.App.Services
 
         }
 
+
         public Deposit GetDepToReturn(int id)
         {
             var deposit = _depositRepository.GetDepositById(id);
             return deposit;
         }
+
+        
     }
 }
