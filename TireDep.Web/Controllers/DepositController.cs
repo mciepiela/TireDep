@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using TireDep.App.Interfaces;
@@ -93,6 +94,7 @@ namespace TireDep.Web.Controllers
             NewDepositVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name");
             return View(new NewDepositVm());
         }
+        [Authorize]
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -141,6 +143,8 @@ namespace TireDep.Web.Controllers
             var depostToEdit = _depositService.GetDepositToEdit(id);
             return View(depostToEdit);
         }
+        [Authorize]
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditDeposit(NewDepositVm depostToEdit)
@@ -163,6 +167,7 @@ namespace TireDep.Web.Controllers
 
         }
 
+        [Authorize]
         public IActionResult ReturnDep(int id)
         {
             var model = _depositService.GetDepToReturn(id);

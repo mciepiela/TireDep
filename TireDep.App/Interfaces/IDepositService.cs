@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TireDep.App.ViewModels.Deposit;
 using TireDep.App.ViewModels.Owner;
 using TireDep.Domain.Model;
@@ -24,7 +25,8 @@ namespace TireDep.App.Interfaces
         Deposit GetDepToReturn(int id);
         //int UpdateDepositToReturn(DepositToReturnVm model);
 
-
         void ReturnDeposit(Deposit model);
+
+       
     }
 }

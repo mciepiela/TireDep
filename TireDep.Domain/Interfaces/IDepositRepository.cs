@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using TireDep.Domain.Model;
 
 
@@ -35,6 +36,9 @@ namespace TireDep.Domain.Interfaces
 
         IQueryable<SeasonTire> GetAllSeasonTire();
         SeasonTire GetSeason(int seasonTireId);
+
+        //API
+        Task<IEnumerable<Deposit>> ListAsync();
     }
 
 
