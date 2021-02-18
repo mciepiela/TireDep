@@ -51,7 +51,7 @@ namespace TireDep.App.Services
             return depositList;
         }
 
-        public int AddDeposit(NewDepositVm depositToAdd)
+        public int AddDeposit(DepositOwnerVm depositToAdd)
         {
             
             var deposit = _mapper.Map<Deposit>(depositToAdd);
@@ -65,7 +65,7 @@ namespace TireDep.App.Services
             if(id != 0)
             {
                 var deposit = _depositRepository.GetDepositById(id);
-                Owner owner = _ownerRepository.GetOwner(deposit.OwnerId);
+                var owner = _ownerRepository.GetOwner(deposit.OwnerId);
                 var season = _depositRepository.GetSeason(deposit.SeasonTireId);
                 var contact = _ownerRepository.GetContact(owner.Id);
                 var depositVm = new DepositDetVm();
@@ -142,17 +142,78 @@ namespace TireDep.App.Services
             return model;
         }
 
-        public NewDepositVm GetDepositToEdit(int id)
+        public DepositOwnerVm GetDepositToEdit(int id)
         {
-            var depositToEdit = _depositRepository.GetDepositById(id);
-            var depositVm = _mapper.Map<NewDepositVm>(depositToEdit);
-            return depositVm;
+            if (id == 0)
+            {
+                throw new ArgumentException("id nie może być równe 0");
+            }
+            else
+            {
+                var depositToEdit = _depositRepository.GetDepositById(id);
+                var owner = _ownerRepository.GetOwner(depositToEdit.OwnerId);
+                var conntact = _ownerRepository.GetContact(owner.Id);
+                var season = _depositRepository.GetSeason(depositToEdit.SeasonTireId);
+                
+                
+                DepositVm depositVm = new DepositVm()
+                {
+                    Id = depositToEdit.Id,
+                    EndDate = depositToEdit.EndDate,
+                    IsActive = depositToEdit.IsActive,
+                    Name = depositToEdit.Name,
+                    OwnerId = depositToEdit.OwnerId,
+                    Price = depositToEdit.Price,
+                    SeasonTireId = depositToEdit.SeasonTireId,
+                    StartDate = depositToEdit.StartDate,
+                    TireTreadHeight = depositToEdit.TireTreadHeight,
+                };
 
+                OwnerVm ownerVm = new OwnerVm()
+                {
+                    ContactId = owner.Contact.Id,
+                    FirstName = owner.FirstName,
+                    Id = owner.Id,
+                    LastName = owner.LastName,
+                };
+                ContactVm contactVm = new ContactVm()
+                {
+                    Email = conntact.Email,
+                    Tel = conntact.Tel,
+                    Id = conntact.Id,
+                    OwnerRef = conntact.OwnerRef,
+                };
+                SeasonTireVm seasonVm = new SeasonTireVm()
+                {
+                    Id = season.Id,
+                    Name = season.Name,
+                };
+                
+                DepositOwnerVm depositOwnerVm = new DepositOwnerVm()
+                {
+                   Deposit = depositVm,
+                   Contact = contactVm,
+                   Owner = ownerVm,
+                   Season = seasonVm,
+                };
+                
+
+                //var depositVm = _mapper.Map<DepositOwnerVm>(depositToEdit);
+                //depositVm.Deposit = _mapper.Map<DepositVm>(depositToEdit);
+                //depositVm.Owner = _mapper.Map<OwnerVm>(depositToEdit);
+
+                //depositVm.Contact = _mapper.Map<ContactVm>(depositToEdit);
+                // depositVm.Season = _mapper.Map<SeasonTireVm>(depositToEdit);
+
+                return depositOwnerVm;
+            }
         }
 
-        public void UpdateDeposit(NewDepositVm depostToEdit)
+        public void UpdateDeposit(DepositOwnerVm depostToEdit)
         {
+            
             var deposit = _mapper.Map<Deposit>(depostToEdit);
+            //deposit.Owner = depostToEdit.
             _depositRepository.UpdateDeposit(deposit);
 
         }

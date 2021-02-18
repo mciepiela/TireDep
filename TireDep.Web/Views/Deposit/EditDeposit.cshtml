@@ -1,4 +1,4 @@
-﻿@model TireDep.App.ViewModels.Deposit.NewDepositVm
+﻿@model TireDep.App.ViewModels.Deposit.DepositOwnerVm
 
 @{
     ViewData["Title"] = "EditDeposit";
@@ -13,42 +13,42 @@
         <form asp-action="EditDeposit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <input type="hidden" asp-for="Id" class="form-control" />
-                <input type="hidden" class="form-check-input" asp-for="IsActive" />
+                <input type="hidden" asp-for="Deposit.Id" class="form-control" />
+                <input type="hidden" class="form-check-input" asp-for="Deposit.IsActive" />
             </div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="Deposit.Name" class="control-label"></label>
+                <input asp-for="Deposit.Name" class="form-control" />
+                <span asp-validation-for="Deposit.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TireTreadHeight" class="control-label"></label>
-                <input asp-for="TireTreadHeight" class="form-control" />
-                <span asp-validation-for="TireTreadHeight" class="text-danger"></span>
+                <label asp-for="Deposit.TireTreadHeight" class="control-label"></label>
+                <input asp-for="Deposit.TireTreadHeight" class="form-control" />
+                <span asp-validation-for="Deposit.TireTreadHeight" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <select class="form-control" asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
-                <input type="hidden" asp-for="SeasonTireId" class="form-control"/>
+                <select class="form-control" asp-for="Deposit.SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
+                <input type="hidden" asp-for="Deposit.SeasonTireId" class="form-control"/>
             </div>
             <div class="form-group">
                 <label asp-for="Owner" class="control-label"></label>
-                <select class="form-control" asp-for="OwnerId" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))" placeholder="Owner" aria-label="Owner"></select>
-                <input type="hidden" asp-for="OwnerId" class="form-control" />
+                <select class="form-control" asp-for="Owner.Id" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))" placeholder="Owner" aria-label="Owner"></select>
+                <input type="hidden" asp-for="Owner.Id" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="StartDate" class="control-label"></label>
-                <input asp-for="StartDate" class="form-control" />
-                <span asp-validation-for="StartDate" class="text-danger"></span>
+                <label asp-for="Deposit.StartDate" class="control-label"></label>
+                <input asp-for="Deposit.StartDate" class="form-control" />
+                <span asp-validation-for="Deposit.StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EndDate" class="control-label"></label>
-                <input asp-for="EndDate" class="form-control" />
-                <span asp-validation-for="EndDate" class="text-danger"></span>
+                <label asp-for="Deposit.EndDate" class="control-label"></label>
+                <input asp-for="Deposit.EndDate" class="form-control" />
+                <span asp-validation-for="Deposit.EndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <label asp-for="Deposit.Price" class="control-label"></label>
+                <input asp-for="Deposit.Price" class="form-control" />
+                <span asp-validation-for="Deposit.Price" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 

@@ -14,11 +14,20 @@ namespace TireDep.App.Mapping
     {
         public MappingProfile()
         {
-            ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
-            //CreateMap<Owner, NewOwnerVm>();
-            //CreateMap<Contact, NewOwnerVm>();
-          
-           
+            //ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
+            CreateMap<Deposit, DepositVm>();
+            CreateMap<Contact, ContactVm>();
+            CreateMap<Owner, OwnerVm>();
+            CreateMap<DepositOwnerVm, Deposit>();
+            CreateMap<Deposit, DepositOwnerVm>();
+            CreateMap<Deposit, DepositForListVm>();
+            //CreateMap<Owner, DepositForListVm>();
+            //CreateMap<SeasonTire, DepositForListVm>();
+            CreateMap<SeasonTire, SeasonTypeForListVm>();//poprawić
+            CreateMap<Owner, OwnerToListVm>();
+
+
+
 
         }
 
