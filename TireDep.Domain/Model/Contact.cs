@@ -16,7 +16,7 @@ namespace TireDep.Domain.Model
         [StringLength(9), MinLength(9)]
         public string Tel { get; set; }
         public int OwnerRef { get; set; }
-        public Owner Owner { get; set; }
+        public virtual Owner Owner { get; set; }
 
         // owner : contact relacja 1:1, dodatkowo
         // trzeba stworzyć klasę, która będzie przechowywać powiązanie

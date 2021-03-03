@@ -59,7 +59,7 @@ namespace TireDep.Infrastructure.Repo
 
         public IQueryable<Deposit> GetAllActiveDeposits()
         {
-            var deposits = _context.Deposits.Where(p => p.IsActive == true);
+            var deposits = _context.Deposits.Where(p => p.IsActive);
             return deposits;
         }
 
@@ -71,7 +71,7 @@ namespace TireDep.Infrastructure.Repo
 
         public Deposit GetDepositById(int depositId)
         {
-            var deposit = _context.Deposits.FirstOrDefault(p => p.Id == depositId);
+            var deposit = _context.Deposits.Include(x => x.Owner.Contact).Include(x => x.SeasonTire).FirstOrDefault(p => p.Id == depositId);
             return deposit;
         }
 

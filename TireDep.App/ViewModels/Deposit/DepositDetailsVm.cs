@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
+﻿using AutoMapper;
+using System;
 using TireDep.App.Mapping;
-using TireDep.Domain.Model;
 
 namespace TireDep.App.ViewModels.Deposit
 {

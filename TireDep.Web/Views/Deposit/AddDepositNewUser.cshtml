@@ -1,7 +1,7 @@
-﻿@using TireDep.Domain.Model
+﻿
 @using Microsoft.AspNetCore.Mvc.Rendering
-@using TireDep.App.ViewModels.Deposit
-@model TireDep.App.ViewModels.Deposit.NewDepositVm
+
+@model TireDep.App.ViewModels.Deposit.DepositOwnerVm
 
 @{
     ViewData["Title"] = "AddDeposit";
@@ -17,12 +17,12 @@
 
 
 
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="StartDate" />
-    <input type="hidden" asp-for="IsActive" />
+    <input type="hidden" asp-for="Deposit.Id" />
+    <input type="hidden" asp-for="Deposit.StartDate" />
+    <input type="hidden" asp-for="Deposit.IsActive" />
     <input type="hidden" asp-for="Owner.Id" class="form-control" />
-    <input type="hidden" asp-for="Owner.Contact.Id" class="form-control" />
-    <input type="hidden" asp-for="Owner.Contact.OwnerRef" class="form-control" />
+    <input type="hidden" asp-for="Owner.ContactId" class="form-control" />
+    <input type="hidden" asp-for="Contact.OwnerRef" class="form-control" />
 
 
     <div class="row"><div class="col"><h5>Owner</h5></div></div><br/>
@@ -41,12 +41,12 @@
     <div class="row"><div class="col"><h7>Contact Details</h7></div></div>
     <div class="row">
         <div class="col">
-            <input asp-for="Owner.Contact.Email" type="email" class="form-control" placeholder="Email" aria-label="Email">
-            <span asp-validation-for="Owner.Contact.Email" ></span>
+            <input asp-for="Contact.Email" type="email" class="form-control" placeholder="Email" aria-label="Email">
+            <span asp-validation-for="Contact.Email" ></span>
             </div>
         <div class="col">
-            <input asp-for="Owner.Contact.Tel" type="tel" class="form-control" placeholder="Phone" aria-label="Tel">
-            <span asp-validation-for="Owner.Contact.Tel"></span>
+            <input asp-for="Contact.Tel" type="tel" class="form-control" placeholder="Phone" aria-label="Tel">
+            <span asp-validation-for="Contact.Tel"></span>
             </div>
     </div>
     <br/>
@@ -54,17 +54,17 @@
     <div class="row"><div class="col"><h5>Deposit Details</h5></div></div>
     <div class="row">
         <div class="col">
-            <input asp-for="Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme">
-            <span asp-validation-for="Name"></span>
+            <input asp-for="Deposit.Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme">
+            <span asp-validation-for="Deposit.Name"></span>
         </div>
         <div class="col" align="center">
             <label class="form-label" for="tread">Tire Tread Height</label><br />
-            <input asp-for="TireTreadHeight" type="range" class="form-range" min="0" max="10" step="1" id="tread">
-            <span asp-validation-for="TireTreadHeight"></span>
+            <input asp-for="Deposit.TireTreadHeight" type="range" class="form-range" min="0" max="10" step="1" id="tread">
+            <span asp-validation-for="Deposit.TireTreadHeight"></span>
         </div>
         <div class="col">
             
-            <select class="form-control" asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
+            <select class="form-control" asp-for="Deposit.SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
 
         </div>
     </div>

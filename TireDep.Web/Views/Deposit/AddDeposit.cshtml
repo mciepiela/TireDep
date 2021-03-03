@@ -1,7 +1,7 @@
 ﻿@using TireDep.Domain.Model
 @using Microsoft.AspNetCore.Mvc.Rendering
 @using TireDep.App.ViewModels.Deposit
-@model TireDep.App.ViewModels.Deposit.NewDepositVm
+@model TireDep.App.ViewModels.Deposit.DepositOwnerVm
 
 @{
     ViewData["Title"] = "AddDeposit";
@@ -17,24 +17,24 @@
 
 
 
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="StartDate" />
-    <input type="hidden" asp-for="IsActive" />
+    <input type="hidden" asp-for="Deposit.Id" />
+    <input type="hidden" asp-for="Deposit.StartDate" />
+    <input type="hidden" asp-for="Deposit.IsActive" />
 
 
 
     <div class="row"><div class="col"><h5>Deposit Details</h5></div></div>
     <div class="row">
         <div class="col">
-            <input asp-for="Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme" >
-            <span asp-validation-for="Name"></span>
+            <input asp-for="Deposit.Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme" >
+            <span asp-validation-for="Deposit.Name"></span>
         </div>
         <div class="col">
-            <input asp-for="TireTreadHeight" type="text" class="form-control" placeholder="Tire Tread Height" aria-label="Tire Tread Height">
-            <span asp-validation-for="TireTreadHeight"></span>
+            <input asp-for="Deposit.TireTreadHeight" type="text" class="form-control" placeholder="Tire Tread Height" aria-label="Tire Tread Height">
+            <span asp-validation-for="Deposit.TireTreadHeight"></span>
         </div>
         <div class="col">
-            <select class="form-control" asp-for="SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
+            <select class="form-control" asp-for="Deposit.SeasonTireId" asp-items="@(new SelectList(@ViewBag.Seasons, "Id", "Name"))" placeholder="Season Tire Type" aria-label="Season Tire Type"></select>
         </div>
     </div>
     <br />
@@ -42,7 +42,7 @@
     <div class="row">
         <div class="col">
 
-            <select class="form-control" asp-for="OwnerId" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))" placeholder="Owner" aria-label="Owner"></select>
+            <select class="form-control" asp-for="Deposit.OwnerId" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))" placeholder="Owner" aria-label="Owner"></select>
         </div>
     </div>
 

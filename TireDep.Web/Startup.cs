@@ -1,27 +1,16 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using AutoMapper;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.Extensions.Logging;
 using TireDep.App;
 using TireDep.App.ViewModels.Deposit;
-using TireDep.Domain.Interfaces;
 using TireDep.Infrastructure;
-using TireDep.Infrastructure.Repo;
-using TireDep.Web.Data;
 
 namespace TireDep.Web
 {
@@ -44,9 +33,12 @@ namespace TireDep.Web
                 .AddEntityFrameworkStores<Context>();
             services.AddApp();
             services.AddInfrastructure();
-            services.AddControllersWithViews().AddFluentValidation(fv => fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
+            services.AddControllersWithViews().AddFluentValidation(x=>x.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
             services.AddRazorPages();
-            services.AddTransient<IValidator<NewDepositVm>, NewDepositVm.NewDepositValidation>();
+        //  services.AddMvcCore().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ContactValidation>());
+            services.AddTransient<IValidator<DepositVm>, DepositVm.DepositVmVal>();
+            services.AddTransient<IValidator<ContactVm>, ContactVm.ContactValidation>();
+            services.AddTransient<IValidator<OwnerVm>, OwnerVm.OwnerValidation>();
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = false;

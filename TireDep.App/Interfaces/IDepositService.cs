@@ -11,15 +11,15 @@ namespace TireDep.App.Interfaces
     public interface IDepositService
     {
         LisOfDepositsForListVm GetAllDepositForList(int pageSize, int pageNo, string searchString, string searchStringOwnerName);
-        int AddDeposit(NewDepositVm newDeposit);
+        int AddDeposit(DepositOwnerVm newDeposit);
         DepositDetVm ViewDepositById(int id);
         DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId);
         DepositListByOwnerListForVm ViewDepositsByOwnerName(string ownerName);
 
         ListOfSeasonTypeVm GetSeasonType();
 
-        NewDepositVm GetDepositToEdit(int id);
-        void UpdateDeposit(NewDepositVm depostToEdit);
+        DepositOwnerVm GetDepositToEdit(int id);
+        void UpdateDeposit(DepositOwnerVm depostToEdit);
 
         //DepositToReturnVm GetDepositToReturn(int id);
         Deposit GetDepToReturn(int id);
@@ -27,6 +27,7 @@ namespace TireDep.App.Interfaces
 
         void ReturnDeposit(Deposit model);
 
-       
+        int AddDepositExistedUser(DepositOwnerVm depositToAdd);
+        SeasonTireVm GetSelectecSeason(int seasonId);
     }
 }

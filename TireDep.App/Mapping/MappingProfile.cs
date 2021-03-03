@@ -14,11 +14,34 @@ namespace TireDep.App.Mapping
     {
         public MappingProfile()
         {
-            ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
-            //CreateMap<Owner, NewOwnerVm>();
-            //CreateMap<Contact, NewOwnerVm>();
-          
-           
+            //ApplyMappingFromAssembly(Assembly.GetExecutingAssembly());
+            CreateMap<Deposit, DepositVm>();
+            CreateMap<Contact, ContactVm>();
+            CreateMap<SeasonTire, SeasonTireVm>();
+            CreateMap<Owner, OwnerVm>();
+            CreateMap<DepositOwnerVm, Deposit>()
+                .ForMember(d => d.SeasonTireId, o => o.MapFrom(s => s.Deposit.SeasonTireId))
+                .ForMember(s => s.SeasonTire, o => o.Ignore());
+                    
+            CreateMap<Deposit, DepositOwnerVm>();
+            CreateMap<Deposit, DepositForListVm>();
+            //CreateMap<Owner, DepositForListVm>();
+            //CreateMap<SeasonTire, DepositForListVm>();
+            CreateMap<SeasonTire, SeasonTypeForListVm>();//poprawić
+            CreateMap<Owner, OwnerToListVm>();
+            //CreateMap<DepositOwnerVm, Deposit>()ForMember(d=>d.Owner);
+            CreateMap<DepositOwnerVm, Owner>();
+            CreateMap<DepositOwnerVm, SeasonTire>();
+            CreateMap<DepositOwnerVm, Contact>();
+
+            CreateMap<Domain.Model.Deposit, DepositForListVm>()
+                .ForMember(d => d.Id, opt => opt.MapFrom(s => s.Id))
+                .ForMember(d => d.Name, opt => opt.MapFrom(s => s.Name))
+                .ForMember(d => d.TireTreadHeight, opt => opt.MapFrom(s => s.TireTreadHeight))
+                .ForMember(d => d.SeasonTire, opt => opt.MapFrom(s => s.SeasonTire.Name))
+                .ForMember(d => d.Owner, opt => opt.MapFrom(s => s.Owner.LastName + " " + s.Owner.FirstName));
+
+
 
         }
 

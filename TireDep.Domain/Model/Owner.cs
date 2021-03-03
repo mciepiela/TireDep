@@ -14,7 +14,7 @@ namespace TireDep.Domain.Model
         public string LastName { get; set; }
 
         public virtual ICollection<Deposit> Deposit { get; set; }
-        public Contact Contact { get; set; }
+        public virtual Contact Contact { get; set; }
 
         // owner : contact relacja 1:1
     }
