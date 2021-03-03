@@ -29,7 +29,7 @@ namespace TireDep.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var model = _depositService.GetAllDepositForList(4, 1, "", "");
+            var model = _depositService.GetAllDepositForList(10, 1, "", "");
             _logger.LogInformation("wyświtlenie indexu");
             return View(model);
         }
@@ -66,20 +66,22 @@ namespace TireDep.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddDeposit(DepositOwnerVm model)
         {
+            
 
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 var SelectedSeason = model.Deposit.SeasonTireId;
                 ViewBag.SelectedSeason = model.Deposit.SeasonTireId;
                 var allOwners = _ownerService.GetAllOwners().Owners.ToList();
-                int selectedOwner = model.Owner.Id;
-                var id = _depositService.AddDeposit(model);
-                return RedirectToAction("ViewDepositById", "Deposit", new {id = id});
-            }
-            else
-            {
-                return View(model);
-            }
+                int selectedOwner = model.Deposit.OwnerId;
+                //model.Season.Id = model.Deposit.SeasonTireId;
+                var id = _depositService.AddDepositExistedUser(model);
+                return RedirectToAction("ViewDepositById", "Deposit", new { id = id });
+            //}
+            //else
+            //{
+            //    return View(model);
+            //}
 
 
         }
@@ -103,7 +105,7 @@ namespace TireDep.Web.Controllers
         {
             //if (ModelState.IsValid)
             //{
-                var SelectedSeason = model.Deposit.SeasonTireId;
+            var SelectedSeason = model.Deposit.SeasonTireId;
             ViewBag.SelectedSeason = model.Deposit.SeasonTireId;
             var id = _depositService.AddDeposit(model);
             return RedirectToAction("ViewDepositById", "Deposit", new {id = id});
@@ -114,7 +116,7 @@ namespace TireDep.Web.Controllers
             //}
         }
 
-
+        [HttpGet]
         public IActionResult ViewDepositById(int id)
         {
             var model = _depositService.ViewDepositById(id);
@@ -138,7 +140,6 @@ namespace TireDep.Web.Controllers
 
             var allOwners = _ownerService.GetAllOwners().Owners.ToList();
             ViewBag.Owners = allOwners;
-
             DepositOwnerVm.AllOwners = new SelectList(allOwners, "Id", "LastName");
             var depostToEdit = _depositService.GetDepositToEdit(id);
             return View(depostToEdit);
@@ -149,26 +150,29 @@ namespace TireDep.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditDeposit(DepositOwnerVm depostToEdit)
         {
-            if(depostToEdit.Owner.Id != 0)
-            { 
             if (ModelState.IsValid)
             {
-                var SelectedSeason = depostToEdit.Deposit.SeasonTireId;
-                ViewBag.SelectedSeason = depostToEdit.Deposit.SeasonTireId;
-                var allOwners = _ownerService.GetAllOwners().Owners.ToList();
-                int selectedOwner = depostToEdit.Owner.Id;
+                var owner = _ownerService.GetOwner(depostToEdit.Owner.Id);
+                var contact = _ownerService.GetContactByOwnerId(depostToEdit.Owner.Id);
+                var season = _depositService.GetSelectecSeason(depostToEdit.Season.Id);
+                depostToEdit.Owner = owner;
+                depostToEdit.Contact = contact;
+                depostToEdit.Season = season;
+                depostToEdit.Deposit.OwnerId = owner.Id;
+                depostToEdit.Deposit.SeasonTireId = season.Id;
+                depostToEdit.Owner.ContactId = contact.Id;
+                //depostToEdit.Contact.OwnerRef = 
+                //var SelectedSeason = depostToEdit.Season.Id;
+                //ViewBag.SelectedSeason = depostToEdit.Deposit.SeasonTireId;
+                //var allOwners = _ownerService.GetAllOwners().Owners.ToList();
+                //ViewBag.
+                //int selectedOwner = depostToEdit.Owner.Id;
                 _depositService.UpdateDeposit(depostToEdit);
                 return RedirectToAction("ViewDepositById", "Deposit", new { id = depostToEdit.Deposit.Id });
             }
             else
             {
-                return View(depostToEdit);
-            }
-
-            }
-            else
-            {
-                return View(depostToEdit);
+                throw new ArgumentException("Incorrect model.");
             }
         }
 

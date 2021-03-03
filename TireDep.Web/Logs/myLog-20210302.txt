@@ -1,0 +1,484 @@
+2021-03-02T09:41:28.4468089+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T09:41:28.4804211+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T09:41:28.5193154+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T09:41:34.2178877+01:00 80000002-0007-fa00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T09:43:41.9129131+01:00 8000001a-0002-ff00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2021-03-02T09:53:01.5651110+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T09:53:01.5732763+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T09:53:01.5747278+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T09:55:03.9212612+01:00 80000016-0001-fd00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T10:04:17.6261596+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T10:04:17.6348718+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T10:04:17.6365835+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T10:04:23.9026010+01:00 80000015-0006-fd00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T10:05:55.2444873+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T10:05:55.2525507+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T10:05:55.2539658+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T10:05:58.1401784+01:00 80000018-0005-ff00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T10:07:28.6807670+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T10:07:28.6904584+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T10:07:28.6918891+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T10:11:57.0791983+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T10:11:57.0887818+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T10:11:57.0901895+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T10:32:21.5586156+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T10:32:21.5669823+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T10:32:21.5685878+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T10:36:33.2933824+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T10:36:33.3092412+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T10:36:33.3115408+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:05:47.9747372+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:05:47.9848389+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:05:47.9866452+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:06:32.6025538+01:00 80000024-0002-ff00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T11:10:16.3756970+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:10:16.3900498+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:10:16.3920837+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:10:21.9686559+01:00 8000001d-0006-fd00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T11:30:54.3576995+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:30:54.3660884+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:30:54.3674707+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:38:51.2610842+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:38:51.2721426+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:38:51.2736988+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:43:01.4263375+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:43:01.4370009+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:43:01.4387085+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:52:23.5446761+01:00 80000015-0003-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+DepositOwnerVm -> Deposit
+TireDep.App.ViewModels.Deposit.DepositOwnerVm -> TireDep.Domain.Model.Deposit
+
+Type Map configuration:
+DepositOwnerVm -> Deposit
+TireDep.App.ViewModels.Deposit.DepositOwnerVm -> TireDep.Domain.Model.Deposit
+
+Destination Member:
+Owner
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+OwnerVm -> Owner
+TireDep.App.ViewModels.Deposit.OwnerVm -> TireDep.Domain.Model.Owner
+   at lambda_method(Closure , OwnerVm , Owner , ResolutionContext )
+   at lambda_method(Closure , Object , Deposit , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , Deposit , ResolutionContext )
+   at TireDep.App.Services.DepositService.UpdateDeposit(DepositOwnerVm depostToEdit)
+   at TireDep.Web.Controllers.DepositController.EditDeposit(DepositOwnerVm depostToEdit)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-02T11:57:44.2876089+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:57:44.2969816+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:57:44.2987501+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:57:55.0299274+01:00 80000036-0004-f900-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T11:58:40.5716119+01:00 80000038-0004-f900-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+DepositOwnerVm -> Deposit
+TireDep.App.ViewModels.Deposit.DepositOwnerVm -> TireDep.Domain.Model.Deposit
+
+Type Map configuration:
+DepositOwnerVm -> Deposit
+TireDep.App.ViewModels.Deposit.DepositOwnerVm -> TireDep.Domain.Model.Deposit
+
+Destination Member:
+Owner
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+OwnerVm -> Owner
+TireDep.App.ViewModels.Deposit.OwnerVm -> TireDep.Domain.Model.Owner
+   at lambda_method(Closure , OwnerVm , Owner , ResolutionContext )
+   at lambda_method(Closure , Object , Deposit , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , Deposit , ResolutionContext )
+   at TireDep.App.Services.DepositService.UpdateDeposit(DepositOwnerVm depostToEdit) in C:\Users\micha\source\repos\TireDep\TireDep.App\Services\DepositService.cs:line 157
+   at TireDep.Web.Controllers.DepositController.EditDeposit(DepositOwnerVm depostToEdit) in C:\Users\micha\source\repos\TireDep\TireDep.Web\Controllers\DepositController.cs:line 171
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-02T11:59:07.9886031+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T11:59:07.9973852+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T11:59:07.9988411+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T11:59:12.9595765+01:00 8000003a-0004-f900-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T12:00:04.3382149+01:00 8000002b-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Owner
+System.Object -> TireDep.Domain.Model.Owner
+   at lambda_method(Closure , Object , Owner , ResolutionContext )
+   at TireDep.App.Services.DepositService.UpdateDeposit(DepositOwnerVm depostToEdit) in C:\Users\micha\source\repos\TireDep\TireDep.App\Services\DepositService.cs:line 159
+   at TireDep.Web.Controllers.DepositController.EditDeposit(DepositOwnerVm depostToEdit) in C:\Users\micha\source\repos\TireDep\TireDep.Web\Controllers\DepositController.cs:line 171
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-02T12:10:45.7982556+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T12:10:45.8123851+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T12:10:45.8152318+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T12:12:27.1419741+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T12:12:27.1528433+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T12:12:27.1547510+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T12:13:28.4646929+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T12:13:28.4742013+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T12:13:28.4760145+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T12:20:16.6537138+01:00 80000036-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.AspNetCore.Connections.ConnectionResetException: The client has disconnected
+ ---> System.Runtime.InteropServices.COMException (0x800704CD): An operation was attempted on a nonexistent network connection. (0x800704CD)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.IIS.Core.IO.AsyncIOOperation.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ReadBody()
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.ReadAsync(CancellationToken token)
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.ReadAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ReadAsync(Memory`1 memory, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.IIS.Core.HttpRequestStream.ReadAsyncInternal(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeReader.ReadAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.WebUtilities.FormPipeReader.ReadFormAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.Features.FormFeature.InnerReadFormAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgeryTokenStore.GetRequestTokensAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.ValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-02T13:42:32.0978837+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T13:42:32.1068900+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T13:42:32.1086315+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T13:42:35.8349308+01:00 8000001b-0003-ff00-b63f-84710c7967bb [INF] wyświtlenie indexu (3d4df81d)
+2021-03-02T13:48:44.3493772+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T13:48:44.3640431+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T13:48:44.3653880+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T14:06:21.2843642+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T14:06:21.2928954+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T14:06:21.2942949+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T14:12:30.0748916+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T14:12:30.0831904+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T14:12:30.0847782+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T14:15:06.5515860+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T14:15:06.5629274+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T14:15:06.5644686+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:05:36.3205240+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:05:36.3333059+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:05:36.3366594+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:06:22.6817093+01:00 80000021-0004-f800-b63f-84710c7967bb [INF] Uzycie stronnicowania lub searchbox (0ae2a5cd)
+2021-03-02T18:06:22.7800118+01:00 80000021-0004-f800-b63f-84710c7967bb [ERR] An exception occurred while iterating over the results of a query for context type '"TireDep.Infrastructure.Context"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:187dcb30-ce2d-4f3a-9469-a7f1604ead36
+Error Number:10744,State:1,Class:15" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:187dcb30-ce2d-4f3a-9469-a7f1604ead36
+Error Number:10744,State:1,Class:15
+2021-03-02T18:10:08.8098346+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:10:08.8216905+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:10:08.8235667+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:12:12.7672396+01:00 80000025-0004-f800-b63f-84710c7967bb [INF] Uzycie stronnicowania lub searchbox (0ae2a5cd)
+2021-03-02T18:12:12.8531992+01:00 80000025-0004-f800-b63f-84710c7967bb [ERR] An exception occurred while iterating over the results of a query for context type '"TireDep.Infrastructure.Context"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:8582fc6f-86f7-41da-bea5-6c1c5fbc7ff7
+Error Number:10744,State:1,Class:15" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:8582fc6f-86f7-41da-bea5-6c1c5fbc7ff7
+Error Number:10744,State:1,Class:15
+2021-03-02T18:14:26.0083735+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:14:26.0172658+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:14:26.0185566+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:14:29.9948309+01:00 80000005-0003-fe00-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T18:22:45.5841651+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:22:45.5922844+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:22:45.5938204+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:23:12.6011664+01:00 80000012-0004-f700-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T18:26:35.8370672+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:26:35.8461806+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:26:35.8477191+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:26:38.3449857+01:00 80000036-0000-fd00-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T18:27:27.4113830+01:00 80000037-0006-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TireDep.App.Services.DepositService.AddDeposit(DepositOwnerVm depositToAdd) in C:\Users\micha\source\repos\TireDep\TireDep.App\Services\DepositService.cs:line 58
+   at TireDep.Web.Controllers.DepositController.AddDepositNewUser(DepositOwnerVm model) in C:\Users\micha\source\repos\TireDep\TireDep.Web\Controllers\DepositController.cs:line 109
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-03-02T18:31:08.0119993+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:31:08.0204992+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:31:08.0222809+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:31:26.6535451+01:00 8000004a-0002-ff00-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T18:42:45.0321125+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T18:42:45.0413477+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T18:42:45.0432113+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T18:43:02.2847016+01:00 8000001c-0001-fd00-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T18:43:02.7002550+01:00 8000004e-0002-ff00-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T19:14:34.8186112+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T19:14:34.8274749+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T19:14:34.8293940+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T19:15:11.7817400+01:00 8000002e-0004-f800-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T19:15:50.5518909+01:00 8000003b-0006-ff00-b63f-84710c7967bb [ERR] Failed executing DbCommand ("19"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 9)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Email], [OwnerRef], [Tel])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Contacts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (627a98df)
+2021-03-02T19:15:50.5969494+01:00 8000003b-0006-ff00-b63f-84710c7967bb [ERR] An exception occurred in the database while saving changes for context type '"TireDep.Infrastructure.Context"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_Contacts_Owners_OwnerRef\". The conflict occurred in database \"TireDB\", table \"dbo.Owners\", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:096d6771-e890-4282-bfea-92e254b9cdd0
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Contacts_Owners_OwnerRef". The conflict occurred in database "TireDB", table "dbo.Owners", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:096d6771-e890-4282-bfea-92e254b9cdd0
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2021-03-02T19:17:48.9087326+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-03-02T19:17:48.9187558+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-03-02T19:17:48.9208909+01:00  [INF] Content root path: "C:\Users\micha\source\repos\TireDep\TireDep.Web" (b5d60022)
+2021-03-02T19:17:52.1444782+01:00 80000017-0000-fc00-b63f-84710c7967bb [INF] Dodawanie depozytu dla nowego klienta (b57ccfcc)
+2021-03-02T19:18:27.8284810+01:00 8000003d-0006-ff00-b63f-84710c7967bb [ERR] Failed executing DbCommand ("34"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = -1)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Email], [OwnerRef], [Tel])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Contacts]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (627a98df)
+2021-03-02T19:18:27.8761386+01:00 8000003d-0006-ff00-b63f-84710c7967bb [ERR] An exception occurred in the database while saving changes for context type '"TireDep.Infrastructure.Context"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_Contacts_Owners_OwnerRef\". The conflict occurred in database \"TireDB\", table \"dbo.Owners\", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:367269f6-88c4-47e5-a056-6a5cd0be2386
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Contacts_Owners_OwnerRef". The conflict occurred in database "TireDB", table "dbo.Owners", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:367269f6-88c4-47e5-a056-6a5cd0be2386
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)

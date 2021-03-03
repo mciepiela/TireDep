@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
+using FluentValidation;
 using TireDep.App.Mapping;
 
 namespace TireDep.App.ViewModels.Deposit
@@ -14,6 +15,18 @@ namespace TireDep.App.ViewModels.Deposit
         public string LastName { get; set; }
         public int ContactId { get; set; }
         //public int OwnerRef { get; set; }
+
+
+        public class OwnerValidation : AbstractValidator<OwnerVm>
+        {
+            public OwnerValidation()
+            {
+                RuleFor(x => x.FirstName).NotEmpty().MaximumLength(50);
+                RuleFor(x => x.LastName).NotEmpty().MaximumLength(50);
+
+            }
+        }
+
         public void Mapping(Profile profile)
         {
             profile.CreateMap<OwnerVm, Domain.Model.Owner>()

@@ -6,6 +6,7 @@ using System.Text;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using TireDep.App.Interfaces;
+using TireDep.App.ViewModels.Deposit;
 using TireDep.App.ViewModels.Owner;
 using TireDep.Domain.Interfaces;
 using TireDep.Domain.Model;
@@ -56,6 +57,21 @@ namespace TireDep.App.Services
                 Count = list.Count
             };
             return ownerToList ;
+        }
+
+        public OwnerVm GetOwner(int ownerId)
+        {
+            var ownerFromDb = _ownerRepository.GetOwner(ownerId);
+            var ownerVm = _mapper.Map<OwnerVm>(ownerFromDb);
+            return ownerVm;
+
+        }
+
+        public ContactVm GetContactByOwnerId(int ownerId)
+        {
+            var contactFromDB = _ownerRepository.GetContact(ownerId);
+            var contactVm = _mapper.Map<ContactVm>(contactFromDB);
+            return contactVm;
         }
     }
 }

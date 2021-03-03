@@ -12,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +23,7 @@ using TireDep.App.Interfaces;
 using TireDep.Domain.Interfaces;
 using TireDep.Infrastructure.Repo;
 using TireDep.App.Services;
+using TireDep.App.ViewModels.Deposit;
 using TireDep.Infrastructure;
 using TireDep.RESTApi.Mapping;
 using DepositService = TireDep.RESTApi.Services.DepositService;
@@ -41,6 +44,7 @@ namespace TireDep.RESTApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
             services.AddMvcCore().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddDbContext<Context>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")));
@@ -64,7 +68,7 @@ namespace TireDep.RESTApi
 
                 };
             });
-
+           
 
         }
 

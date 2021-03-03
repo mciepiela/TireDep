@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
+using FluentValidation;
 using TireDep.App.Mapping;
 using TireDep.Domain.Model;
 
@@ -17,11 +18,19 @@ namespace TireDep.App.ViewModels.Deposit
         public void Mapping(Profile profile)
         {
             profile.CreateMap<ContactVm, Contact>().ReverseMap();
-            profile.CreateMap<Domain.Model.Deposit, ContactVm>()
-                .ForPath(d => d.Id, opt => opt.MapFrom(s => s.Owner.Contact.Id))
-                .ForPath(d => d.Email, opt => opt.MapFrom(s => s.Owner.Contact.Email))
-                .ForPath(d => d.Tel, opt => opt.MapFrom(s => s.Owner.Contact.Tel))
-                .ForPath(d => d.OwnerRef, opt => opt.MapFrom(s => s.Owner.Contact.OwnerRef));
         }
+
+        public class ContactValidation : AbstractValidator<ContactVm>
+        {
+            public ContactValidation()
+            {
+                RuleFor(x => x.Tel).MinimumLength(9).MaximumLength(9).NotEmpty();
+                RuleFor(x => x.Email).EmailAddress();
+                RuleFor(x => x.Id).NotNull();
+            }
+        }
+
     }
+
+   
 }

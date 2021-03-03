@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using TireDep.Domain.Interfaces;
 using TireDep.Domain.Model;
 
@@ -44,7 +45,7 @@ namespace TireDep.Infrastructure.Repo
 
         public IQueryable<Owner> GetAllOwners()
         {
-            var owners = _context.Owners;
+            var owners = _context.Owners.Include(x=>x.Contact);
             return owners;
         }
 

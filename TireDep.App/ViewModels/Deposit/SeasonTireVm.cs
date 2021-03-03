@@ -5,6 +5,7 @@ using AutoMapper;
 using TireDep.App.Mapping;
 using TireDep.Domain.Model;
 
+
 namespace TireDep.App.ViewModels.Deposit
 {
     public class SeasonTireVm : IMapFrom<SeasonTire>
@@ -13,9 +14,8 @@ namespace TireDep.App.ViewModels.Deposit
         public string Name { get; set; }
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<SeasonTireVm, Domain.Model.SeasonTire>()
-                .ReverseMap();
             profile.CreateMap<SeasonTire, SeasonTireVm>();
+
         }
     }
 }

@@ -33,16 +33,6 @@ namespace TireDep.App.ViewModels.Deposit
                 .ForPath(d => d.Deposit.TireTreadHeight, opt => opt.MapFrom(s => s.TireTreadHeight))
                 .ForPath(d => d.Deposit.OwnerId, opt => opt.MapFrom(s => s.OwnerId))
                 .ForPath(d => d.Deposit.SeasonTireId, opt => opt.MapFrom(s => s.SeasonTireId));
-            //profile.CreateMap<Domain.Model.Owner, DepositOwnerVm>()
-            //    .ForPath(d => d.Owner.Id, opt => opt.MapFrom(s => s.Id))
-            //    .ForPath(d => d.Owner.FirstName, opt => opt.MapFrom(s => s.FirstName))
-            //    .ForPath(d => d.Owner.LastName, opt => opt.MapFrom(s => s.LastName))
-            //    .ForPath(d => d.Owner.ContactId, opt => opt.MapFrom(s => s.Contact.Id));
-            //profile.CreateMap<Domain.Model.Contact, DepositOwnerVm>()
-            //    .ForPath(d => d.Contact.Id, opt => opt.MapFrom(s => s.Id))
-            //    .ForPath(d => d.Contact.Email, opt => opt.MapFrom(s => s.Email))
-            //    .ForPath(d => d.Contact.Tel, opt => opt.MapFrom(s => s.Tel))
-            //    .ForPath(d => d.Contact.OwnerRef, opt => opt.MapFrom(s => s.OwnerRef));
 
             profile.CreateMap<DepositOwnerVm, Domain.Model.Deposit>()
                 .ForMember(d => d.Name, opt => opt.MapFrom(s => s.Deposit.Name))
@@ -54,24 +44,10 @@ namespace TireDep.App.ViewModels.Deposit
                 .ForMember(d => d.IsActive, opt => opt.MapFrom(s => s.Deposit.IsActive))
                 .ForMember(d => d.OwnerId, opt => opt.MapFrom(s => s.Deposit.OwnerId))
                 .ForMember(d => d.SeasonTireId, opt => opt.MapFrom(s => s.Deposit.SeasonTireId))
-                //.ForPath(d => d.Owner.Id, opt => opt.MapFrom(s=>s.Deposit.OwnerId))
-                //.ForPath(d => d.Owner.FirstName, opt => opt.MapFrom(s => s.Owner.FirstName))
-                //.ForPath(d => d.Owner.LastName, opt => opt.MapFrom(s => s.Owner.LastName))
-                //.ForPath(d => d.Owner.Contact.Id, opt => opt.MapFrom(s => s.Contact.Id))
-                //.ForPath(d => d.Owner.Contact.Email, opt => opt.MapFrom(s => s.Contact.Email))
-                //.ForPath(d => d.Owner.Contact.Tel, opt => opt.MapFrom(s => s.Contact.Tel))
-                //.ForPath(d => d.Owner.Contact.OwnerRef, opt => opt.MapFrom(s => s.Contact.OwnerRef))
                 .ForPath(d => d.SeasonTire.Id, opt => opt.MapFrom(s => s.Season.Id))
                 .ForPath(d => d.SeasonTire.Name, opt => opt.MapFrom(s => s.Season.Name));
 
-            //profile.CreateMap<DepositOwnerVm, Domain.Model.Owner>()
-            //    .ForPath(d => d.Id, opt => opt.MapFrom(s => s.Deposit.OwnerId))
-            //    .ForPath(d => d.FirstName, opt => opt.MapFrom(s => s.Owner.FirstName))
-            //    .ForPath(d => d.LastName, opt => opt.MapFrom(s => s.Owner.LastName))
-            //    .ForPath(d => d.Contact.Id, opt => opt.MapFrom(s => s.Contact.Id))
-            //    .ForPath(d => d.Contact.Email, opt => opt.MapFrom(s => s.Contact.Email))seasF
-            //    .ForPath(d => d.Contact.Tel, opt => opt.MapFrom(s => s.Contact.Tel))
-            //    .ForPath(d => d.Contact.OwnerRef, opt => opt.MapFrom(s => s.Contact.OwnerRef));
+
 
             //from owner i from contact
 

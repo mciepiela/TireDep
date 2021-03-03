@@ -31,12 +31,14 @@ namespace TireDep.App.Services
 
         public LisOfDepositsForListVm GetAllDepositForList(int pageSize, int pageNo, string searchString, string searchStringOwnerName)
         {
-            var deposits = _depositRepository.GetAllActiveDeposits()
+            var countOfDeposits = _depositRepository.GetAllActiveDeposits().Count();
+            var depositsToShow = _depositRepository.GetAllActiveDeposits()
                 .Where(p => p.Name.Contains(searchString))
                 .Where(d=>d.Owner.LastName.Contains(searchStringOwnerName) || d.Owner.FirstName.Contains(searchStringOwnerName))
-                .ProjectTo<DepositForListVm>(_mapper.ConfigurationProvider).ToList();
+                .ProjectTo<DepositForListVm>(_mapper.ConfigurationProvider)
+                .Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();
 
-            var depositsToShow = deposits.Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();
+                //var depositsToShow = deposits.Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();
 
             var depositList = new LisOfDepositsForListVm()
             {
@@ -44,7 +46,7 @@ namespace TireDep.App.Services
                 PageSize = pageSize,
                 SearchString = searchString,
                 Deposits = depositsToShow,
-                Count = deposits.Count
+                Count = countOfDeposits
             };
 
 
@@ -53,18 +55,52 @@ namespace TireDep.App.Services
 
         public int AddDeposit(DepositOwnerVm depositToAdd)
         {
-            
-            var deposit = _mapper.Map<Deposit>(depositToAdd);
-            var id = _depositRepository.AddDeposit(deposit);
+           // depositToAdd.Season.Id = depositToAdd.Deposit.SeasonTireId;
+           Deposit newDeposit = new Deposit();
+           //Owner newOwner = new Owner();
+           //Contact newContact = new Contact();
+
+           //newContact.Id = depositToAdd.Contact.Id;
+           //newContact.Email = depositToAdd.Contact.Email;
+           //newContact.OwnerRef = depositToAdd.Contact.OwnerRef;
+           //newContact.Tel = depositToAdd.Contact.Tel;
+           //var contactId = _ownerRepository.AddNewContactToOwner(newContact);
+           //var contact = _ownerRepository.GetContact(contactId);
+
+           //newOwner.Id = depositToAdd.Owner.Id;
+           //newOwner.LastName = depositToAdd.Owner.LastName;
+           //newOwner.FirstName = depositToAdd.Owner.FirstName;
+           //newOwner.Contact = contact;
+
+           //var ownerId = _ownerRepository.AddOwner(newOwner);
+
+           //newDeposit.Id = depositToAdd.Deposit.Id;
+           newDeposit.Name = depositToAdd.Deposit.Name;
+           newDeposit.IsActive = depositToAdd.Deposit.IsActive;
+           newDeposit.Price = depositToAdd.Deposit.Price;
+           newDeposit.SeasonTireId = depositToAdd.Deposit.SeasonTireId;
+           newDeposit.TireTreadHeight = depositToAdd.Deposit.TireTreadHeight;
+           newDeposit.EndDate = depositToAdd.Deposit.EndDate;
+           newDeposit.StartDate = depositToAdd.Deposit.StartDate;
+
+           //newDeposit.Owner.Id = depositToAdd.Owner.Id;
+           newDeposit.Owner = new Owner();
+           newDeposit.Owner.LastName = depositToAdd.Owner.LastName;
+           newDeposit.Owner.FirstName = depositToAdd.Owner.FirstName;
+           newDeposit.Owner.Contact = new Contact();
+           newDeposit.Owner.Contact.Email = depositToAdd.Contact.Email;
+           newDeposit.Owner.Contact.Tel = depositToAdd.Contact.Tel;
+           newDeposit.Owner.Contact.OwnerRef = depositToAdd.Contact.OwnerRef;
+
+            //var deposit = _mapper.Map<Deposit>(depositToAdd);
+            var id = _depositRepository.AddDeposit(newDeposit);
             return id;
         }
 
 
         public DepositDetVm ViewDepositById(int id)
         {
-            if(id != 0)
-            {
-                var deposit = _depositRepository.GetDepositById(id);
+            var deposit = _depositRepository.GetDepositById(id);
                 var owner = _ownerRepository.GetOwner(deposit.OwnerId);
                 var season = _depositRepository.GetSeason(deposit.SeasonTireId);
                 var contact = _ownerRepository.GetContact(owner.Id);
@@ -91,16 +127,10 @@ namespace TireDep.App.Services
                 }
 
                 return depositVm;
-            }
-            else
-            {
-                // obejście błędu - nie istotne dla logii aplikacji
-                DepositDetVm cm = new DepositDetVm();
-                return cm;
-            }
             
 
-        }
+
+    }
 
         public DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId)
         {
@@ -144,75 +174,40 @@ namespace TireDep.App.Services
 
         public DepositOwnerVm GetDepositToEdit(int id)
         {
-            if (id == 0)
-            {
-                throw new ArgumentException("id nie może być równe 0");
-            }
-            else
-            {
-                var depositToEdit = _depositRepository.GetDepositById(id);
-                var owner = _ownerRepository.GetOwner(depositToEdit.OwnerId);
-                var conntact = _ownerRepository.GetContact(owner.Id);
-                var season = _depositRepository.GetSeason(depositToEdit.SeasonTireId);
-                
-                
-                DepositVm depositVm = new DepositVm()
-                {
-                    Id = depositToEdit.Id,
-                    EndDate = depositToEdit.EndDate,
-                    IsActive = depositToEdit.IsActive,
-                    Name = depositToEdit.Name,
-                    OwnerId = depositToEdit.OwnerId,
-                    Price = depositToEdit.Price,
-                    SeasonTireId = depositToEdit.SeasonTireId,
-                    StartDate = depositToEdit.StartDate,
-                    TireTreadHeight = depositToEdit.TireTreadHeight,
-                };
+            var depositToEdit = _depositRepository.GetDepositById(id);
+                var owner = depositToEdit.Owner;
+                var contact = depositToEdit.Owner.Contact;
+                var season = depositToEdit.SeasonTire;
+         
+                var depositVm = _mapper.Map<DepositOwnerVm>(depositToEdit);
+                depositVm.Deposit = _mapper.Map<DepositVm>(depositToEdit);
+                depositVm.Owner = _mapper.Map<OwnerVm>(depositToEdit.Owner);
 
-                OwnerVm ownerVm = new OwnerVm()
-                {
-                    ContactId = owner.Contact.Id,
-                    FirstName = owner.FirstName,
-                    Id = owner.Id,
-                    LastName = owner.LastName,
-                };
-                ContactVm contactVm = new ContactVm()
-                {
-                    Email = conntact.Email,
-                    Tel = conntact.Tel,
-                    Id = conntact.Id,
-                    OwnerRef = conntact.OwnerRef,
-                };
-                SeasonTireVm seasonVm = new SeasonTireVm()
-                {
-                    Id = season.Id,
-                    Name = season.Name,
-                };
-                
-                DepositOwnerVm depositOwnerVm = new DepositOwnerVm()
-                {
-                   Deposit = depositVm,
-                   Contact = contactVm,
-                   Owner = ownerVm,
-                   Season = seasonVm,
-                };
-                
+                depositVm.Contact = _mapper.Map<ContactVm>(depositToEdit.Owner.Contact);
+                depositVm.Season = _mapper.Map<SeasonTireVm>(depositToEdit.SeasonTire);
 
-                //var depositVm = _mapper.Map<DepositOwnerVm>(depositToEdit);
-                //depositVm.Deposit = _mapper.Map<DepositVm>(depositToEdit);
-                //depositVm.Owner = _mapper.Map<OwnerVm>(depositToEdit);
-
-                //depositVm.Contact = _mapper.Map<ContactVm>(depositToEdit);
-                // depositVm.Season = _mapper.Map<SeasonTireVm>(depositToEdit);
-
-                return depositOwnerVm;
-            }
+                return depositVm;
+            
         }
 
         public void UpdateDeposit(DepositOwnerVm depostToEdit)
         {
-            
-            var deposit = _mapper.Map<Deposit>(depostToEdit);
+            Deposit deposit = new Deposit();
+            deposit.OwnerId = depostToEdit.Owner.Id;
+            //deposit.Owner.Id = depostToEdit.Owner.Id;
+            deposit.EndDate = depostToEdit.Deposit.EndDate;
+            deposit.StartDate = depostToEdit.Deposit.StartDate;
+            deposit.Id = depostToEdit.Deposit.Id;
+            //deposit.Owner 
+            deposit.IsActive = depostToEdit.Deposit.IsActive;
+            deposit.Name = depostToEdit.Deposit.Name;
+            deposit.Price = depostToEdit.Deposit.Price;
+            deposit.SeasonTireId = depostToEdit.Season.Id;
+            deposit.TireTreadHeight = depostToEdit.Deposit.TireTreadHeight;
+
+            //deposit.Owner = _mapper.Map<Owner>(depostToEdit.Owner);
+            //deposit.Owner.Contact = _mapper.Map<Contact>(depostToEdit.Contact);
+//deposit = _mapper.Map<Deposit>(depostToEdit);
             //deposit.Owner = depostToEdit.
             _depositRepository.UpdateDeposit(deposit);
 
@@ -228,6 +223,33 @@ namespace TireDep.App.Services
             model.IsActive = CloseDeposit.SetIsNoActive(model.IsActive);
             _depositRepository.UpdateDeposit(model);
 
+        }
+
+        public int AddDepositExistedUser(DepositOwnerVm depositToAdd)
+        {
+          
+            Deposit newDeposit = new Deposit();
+            
+            newDeposit.Name = depositToAdd.Deposit.Name;
+            newDeposit.IsActive = depositToAdd.Deposit.IsActive;
+            newDeposit.Price = depositToAdd.Deposit.Price;
+            newDeposit.SeasonTireId = depositToAdd.Deposit.SeasonTireId;
+            newDeposit.TireTreadHeight = depositToAdd.Deposit.TireTreadHeight;
+            newDeposit.EndDate = depositToAdd.Deposit.EndDate;
+            newDeposit.StartDate = depositToAdd.Deposit.StartDate;
+            newDeposit.OwnerId = depositToAdd.Deposit.OwnerId;
+
+          
+            //var deposit = _mapper.Map<Deposit>(depositToAdd);
+            var id = _depositRepository.AddDeposit(newDeposit);
+            return id;
+        }
+
+        public SeasonTireVm GetSelectecSeason(int seasonId)
+        {
+            var seasonFromDb = _depositRepository.GetSeason(seasonId);
+            var viewModel = _mapper.Map<SeasonTireVm>(seasonFromDb);
+            return viewModel;
         }
 
 

@@ -33,9 +33,12 @@ namespace TireDep.Web
                 .AddEntityFrameworkStores<Context>();
             services.AddApp();
             services.AddInfrastructure();
-            services.AddControllersWithViews().AddFluentValidation(fv => fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
+            services.AddControllersWithViews().AddFluentValidation(x=>x.RunDefaultMvcValidationAfterFluentValidationExecutes = false);
             services.AddRazorPages();
+        //  services.AddMvcCore().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ContactValidation>());
             services.AddTransient<IValidator<DepositVm>, DepositVm.DepositVmVal>();
+            services.AddTransient<IValidator<ContactVm>, ContactVm.ContactValidation>();
+            services.AddTransient<IValidator<OwnerVm>, OwnerVm.OwnerValidation>();
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = false;

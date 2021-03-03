@@ -27,6 +27,7 @@ namespace TireDep.App.Interfaces
 
         void ReturnDeposit(Deposit model);
 
-       
+        int AddDepositExistedUser(DepositOwnerVm depositToAdd);
+        SeasonTireVm GetSelectecSeason(int seasonId);
     }
 }
