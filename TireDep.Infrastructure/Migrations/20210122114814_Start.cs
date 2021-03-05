@@ -286,6 +286,8 @@ namespace TireDep.Infrastructure.Migrations
                 name: "IX_Deposits_SeasonTireId",
                 table: "Deposits",
                 column: "SeasonTireId");
+
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

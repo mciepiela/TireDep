@@ -20,7 +20,7 @@ namespace TireDep.Infrastructure
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
+            
 
             // relacja 1:1
             builder.Entity<Owner>()
@@ -28,8 +28,25 @@ namespace TireDep.Infrastructure
                 .HasForeignKey<Contact>(k => k.OwnerRef);
 
             //relacja wiele do wielu - brak
-
+            //seed
+            var a = builder.Entity<SeasonTire>().HasData(
+                new SeasonTire
+                {
+                    Id = 1,
+                    Name = "Summer"
+                },
+                new SeasonTire
+                {
+                    Id = 2,
+                    Name = "Winter"
+                },
+                new SeasonTire
+                {
+                    Id = 3,
+                    Name = "All Season"
+                }
+            );
+            base.OnModelCreating(builder);
         }
-
     }
 }

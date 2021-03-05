@@ -26,6 +26,8 @@ namespace TireDep.Domain.Interfaces
 
 
          IQueryable<Deposit> GetAllActiveDeposits();
+         //Task<IQueryable<Deposit>> GetAllActiveDepositsAsync();
+
          IQueryable<Deposit> GetAllDepositsByPiceOfName(string piceOfName);
 
 

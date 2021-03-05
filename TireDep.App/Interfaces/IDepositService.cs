@@ -14,6 +14,7 @@ namespace TireDep.App.Interfaces
         int AddDeposit(DepositOwnerVm newDeposit);
         DepositDetVm ViewDepositById(int id);
         DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId);
+        //Task<DepositListByOwnerListForVm> GetListAsync(int ownerId);
         DepositListByOwnerListForVm ViewDepositsByOwnerName(string ownerName);
 
         ListOfSeasonTypeVm GetSeasonType();

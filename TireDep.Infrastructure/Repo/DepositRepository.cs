@@ -63,6 +63,12 @@ namespace TireDep.Infrastructure.Repo
             return deposits;
         }
 
+        //public static async Task<IQueryable<Deposit>> GetAllActiveDepositsAsync()
+        //{
+        //    var deposits = await _context.Deposits.Where(p => p.IsActive);
+        //    return deposits;
+        //}
+
         public IQueryable<Deposit> GetAllDepositsByPiceOfName(string piceOfName)
         {
             var deposits = _context.Deposits.Where(n => n.Owner.LastName.Contains(piceOfName));

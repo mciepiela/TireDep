@@ -147,6 +147,20 @@ namespace TireDep.App.Services
             return result;
         }
 
+        //public async Task<DepositListByOwnerListForVm> GetListAsync(int ownerId)
+        //{
+        //    var deposits = await _depositRepository.GetDepositByOwnerId(ownerId)
+        //        .ProjectTo<DepositByOwnerVm>(_mapper.ConfigurationProvider).ToList();
+
+        //    DepositListByOwnerListForVm result = new DepositListByOwnerListForVm()
+        //    {
+        //        Count = deposits.Count,
+        //        DepositByOwner = deposits
+        //    };
+
+        //    return result;
+        //}
+
         public DepositListByOwnerListForVm ViewDepositsByOwnerName(string piceOfName)
         {
             var deposits = _depositRepository.GetAllDepositsByPiceOfName(piceOfName)

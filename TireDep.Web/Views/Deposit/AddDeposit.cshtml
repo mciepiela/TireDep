@@ -26,7 +26,7 @@
     <div class="row"><div class="col"><h5>Deposit Details</h5></div></div>
     <div class="row">
         <div class="col">
-            <input asp-for="Deposit.Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme" >
+            <input asp-for="Deposit.Name" type="text" class="form-control" placeholder="Deposit Name" aria-label="DepositNAme">
             <span asp-validation-for="Deposit.Name"></span>
         </div>
         <div class="col">
@@ -42,7 +42,9 @@
     <div class="row">
         <div class="col">
 
-            <select class="form-control" asp-for="Deposit.OwnerId" asp-items="@(new SelectList(ViewBag.Owners, "Id", "LastName"))" placeholder="Owner" aria-label="Owner"></select>
+            <select class="ownerSelect2 form-control" asp-for="Deposit.OwnerId" aria-label="Owner">
+                <option></option>
+            </select>
         </div>
     </div>
 
@@ -56,10 +58,44 @@
 
 
 
+
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".ownerSelect2 ").select2(
+                {
+                    minimumInputLength: 3,
+                    placeholder: 'Select an option',
+                    ajax: {
+                        url: '/Owner/Search',
+                        data: function (params) {
+                            var query = {
+                                phrase: params.term,
+                            }
+
+                            return query;
+                        },
+                        processResults: function (data) {
+                            return {
+                                results: data
+                            };
+                        }
+                    },
+
+                }
+                );
+           
+      
+           
+        });
+    </script>
 }
+
+

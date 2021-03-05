@@ -29,7 +29,7 @@ namespace TireDep.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var model = _depositService.GetAllDepositForList(10, 1, "", "");
+            var model = _depositService.GetAllDepositForList(6, 1, "", "");
             _logger.LogInformation("wyświtlenie indexu");
             return View(model);
         }
@@ -39,6 +39,7 @@ namespace TireDep.Web.Controllers
         {
             _logger.LogInformation("Uzycie stronnicowania lub searchbox");
             pageNo ??= 1;
+            pageSize = pageSize == 0 ? 6 : pageSize;
             searchString ??= String.Empty;
             searchStringOwnerName ??= String.Empty;
             var model = _depositService.GetAllDepositForList(pageSize, pageNo.Value, searchString, searchStringOwnerName);

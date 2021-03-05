@@ -59,6 +59,8 @@
          </table>
      </div>
 
+     <input type="hidden" name="pageNo" id="pageNo" />
+     <input type="hidden" name="pageSize" id="pageSize" value="6" />
      <div class="row">
 
          <table>
@@ -80,8 +82,6 @@
          </table>
 
      </div>
-     <input type="hidden" name="pageNo" id="pageNo" />
-     <input type="hidden" name="pageSize" id="pageSize" value="4" />
 
 
 
@@ -100,7 +100,7 @@
          </div> <div class="col-1"><input class="btn btn-danger" type="submit" value="Search" /></div>
 
 
-         
+
      </div>
 
  </form>
@@ -108,9 +108,12 @@
 @section Scripts
 {
     <script type="text/javascript">
-        function PageClick(index)
-        {
+        function PageClick(index) {
+            console.log(document.getElementById("pageNo").value);
+            console.log(document.getElementById("pageSize").value);
             document.getElementById("pageNo").value = index;
+            console.log(document.getElementById("pageNo").value);
+
             document.forms[0].submit();
 
         }

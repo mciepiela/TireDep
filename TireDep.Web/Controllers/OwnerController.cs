@@ -4,18 +4,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using TireDep.App.Interfaces;
 using TireDep.App.ViewModels.Owner;
+using TireDep.Domain.Interfaces;
 
 namespace TireDep.Web.Controllers
 {
     public class OwnerController : Controller
     {
         private readonly IOwnerService _ownerService;
+        private readonly IOwnerRepository _ownerRepository;
 
-        public OwnerController(IOwnerService ownerService)
+        public OwnerController(IOwnerService ownerService, IOwnerRepository ownerRepository)
         {
             _ownerService = ownerService;
+            _ownerRepository = ownerRepository;
         }
 
         public IActionResult Index()
@@ -61,6 +65,14 @@ namespace TireDep.Web.Controllers
             var model = _ownerService.ViewOwnerById(id);
             return View(model);
         }
+
+        [HttpGet]
+        public object Search(string phrase)
+        {
+            return _ownerRepository.GetAllOwnersByLastName(phrase)
+                .Select(o => new {id = o.Id, text = o.FirstName + " " + o.LastName});
+        }
+
     }
 
 }

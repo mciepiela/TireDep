@@ -51,7 +51,7 @@ namespace TireDep.Infrastructure.Repo
 
         public IQueryable<Owner> GetAllOwnersByLastName(string lastName)
         {
-            var owners = _context.Owners.Where(p => p.LastName == lastName);
+            var owners = _context.Owners.Where(p => p.LastName.StartsWith(lastName));
             return owners;
         }
 
