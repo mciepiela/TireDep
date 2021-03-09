@@ -55,17 +55,14 @@ namespace TireDep.Web.Controllers
 
 
 
-        //[HttpPost]
-        //        public IActionResult AddNewOwnerForDeposit(OwnerModel model)
-        //        {
-        //            return View();
-        //        }
+        
         public IActionResult ViewOwnerById(int id)
         {
             var model = _ownerService.ViewOwnerById(id);
             return View(model);
         }
 
+        //Select2
         [HttpGet]
         public object Search(string phrase)
         {

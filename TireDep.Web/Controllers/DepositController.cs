@@ -26,18 +26,12 @@ namespace TireDep.Web.Controllers
             _ownerService = ownerService;
         }
 
-        [HttpGet]
-        public IActionResult Index()
-        {
-            var model = _depositService.GetAllDepositForList(6, 1, "", "");
-            _logger.LogInformation("wyświtlenie indexu");
-            return View(model);
-        }
+ 
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult Index(int pageSize, int? pageNo, string searchString, string searchStringOwnerName)
         {
-            _logger.LogInformation("Uzycie stronnicowania lub searchbox");
+            _logger.LogInformation("Uzycie stronnicowania");
             pageNo ??= 1;
             pageSize = pageSize == 0 ? 6 : pageSize;
             searchString ??= String.Empty;
@@ -45,12 +39,13 @@ namespace TireDep.Web.Controllers
             var model = _depositService.GetAllDepositForList(pageSize, pageNo.Value, searchString, searchStringOwnerName);
             return View(model);
         }
+   
 
         [HttpGet]
         public IActionResult AddDeposit() // for old user
         {
 
-            _logger.LogInformation("Dodawanie depozytu");
+            
             var tyreSeasontype = _depositService.GetSeasonType().SeasonTypeList.ToList();
             ViewBag.Seasons = tyreSeasontype;
             DepositOwnerVm.TyreSeasonSelectList = new SelectList(tyreSeasontype, "Id", "Name");
@@ -58,7 +53,7 @@ namespace TireDep.Web.Controllers
             var allOwners = _ownerService.GetAllOwners().Owners.ToList();
             ViewBag.Owners = allOwners;
             DepositOwnerVm.AllOwners = new SelectList(allOwners, "Id", "LastName");
-
+            _logger.LogInformation("Dodawanie depozytu");
             return View(new DepositOwnerVm());
 
         }
@@ -77,14 +72,9 @@ namespace TireDep.Web.Controllers
                 int selectedOwner = model.Deposit.OwnerId;
                 //model.Season.Id = model.Deposit.SeasonTireId;
                 var id = _depositService.AddDepositExistedUser(model);
-                return RedirectToAction("ViewDepositById", "Deposit", new { id = id });
-            //}
-            //else
-            //{
-            //    return View(model);
-            //}
-
-
+                _logger.LogInformation("Dodawanie depozytu dla starego klienta");
+            return RedirectToAction("ViewDepositById", "Deposit", new { id = id });
+      
         }
 
         // Add Deposit for NewUser

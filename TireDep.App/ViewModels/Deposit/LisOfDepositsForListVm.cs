@@ -8,6 +8,7 @@ namespace TireDep.App.ViewModels.Deposit
     {
         public List<DepositForListVm> Deposits { get; set; }
         public int Count { get; set; }
+        public int CountSearched { get; set; }
         public int CurrentPage { get; set; }
         public int PageSize { get; set; }
         public string SearchStringOwnerName { get; set; }

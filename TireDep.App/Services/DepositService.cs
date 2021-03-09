@@ -15,8 +15,8 @@ namespace TireDep.App.Services
 {
     public class DepositService : IDepositService
     {
-        private readonly IDepositRepository _depositRepository; // przekazuje interfejs zamiast samego repository.
-        private readonly IMapper _mapper; // interfejs automapera
+        private readonly IDepositRepository _depositRepository; 
+        private readonly IMapper _mapper; 
         private readonly IOwnerRepository _ownerRepository;
 
 
@@ -34,7 +34,7 @@ namespace TireDep.App.Services
             var countOfDeposits = _depositRepository.GetAllActiveDeposits().Count();
             var depositsToShow = _depositRepository.GetAllActiveDeposits()
                 .Where(p => p.Name.Contains(searchString))
-                .Where(d=>d.Owner.LastName.Contains(searchStringOwnerName) || d.Owner.FirstName.Contains(searchStringOwnerName))
+                .Where(d=>d.Owner.LastName.StartsWith(searchStringOwnerName) || d.Owner.FirstName.StartsWith(searchStringOwnerName))
                 .ProjectTo<DepositForListVm>(_mapper.ConfigurationProvider)
                 .Skip(pageSize * (pageNo - 1)).Take(pageSize).ToList();
 
@@ -46,35 +46,35 @@ namespace TireDep.App.Services
                 PageSize = pageSize,
                 SearchString = searchString,
                 Deposits = depositsToShow,
-                Count = countOfDeposits
+                Count = countOfDeposits,
+                CountSearched = depositsToShow.Count
             };
 
 
             return depositList;
         }
 
+        public LisOfDepositsForListVm GetAllDepositForList(string searchString, string searchStringOwnerName)
+        {
+            var depositsToShow = _depositRepository.GetAllActiveDeposits()
+                .Where(p => p.Name.Contains(searchString))
+                .Where(d => d.Owner.LastName.Contains(searchStringOwnerName) ||
+                            d.Owner.FirstName.Contains(searchStringOwnerName))
+                .ProjectTo<DepositForListVm>(_mapper.ConfigurationProvider).ToList();
+            var depositList = new LisOfDepositsForListVm()
+            {
+                SearchString = searchString,
+                Deposits = depositsToShow,
+            
+            };
+            return depositList;
+        }
+
         public int AddDeposit(DepositOwnerVm depositToAdd)
         {
-           // depositToAdd.Season.Id = depositToAdd.Deposit.SeasonTireId;
+          
            Deposit newDeposit = new Deposit();
-           //Owner newOwner = new Owner();
-           //Contact newContact = new Contact();
-
-           //newContact.Id = depositToAdd.Contact.Id;
-           //newContact.Email = depositToAdd.Contact.Email;
-           //newContact.OwnerRef = depositToAdd.Contact.OwnerRef;
-           //newContact.Tel = depositToAdd.Contact.Tel;
-           //var contactId = _ownerRepository.AddNewContactToOwner(newContact);
-           //var contact = _ownerRepository.GetContact(contactId);
-
-           //newOwner.Id = depositToAdd.Owner.Id;
-           //newOwner.LastName = depositToAdd.Owner.LastName;
-           //newOwner.FirstName = depositToAdd.Owner.FirstName;
-           //newOwner.Contact = contact;
-
-           //var ownerId = _ownerRepository.AddOwner(newOwner);
-
-           //newDeposit.Id = depositToAdd.Deposit.Id;
+         
            newDeposit.Name = depositToAdd.Deposit.Name;
            newDeposit.IsActive = depositToAdd.Deposit.IsActive;
            newDeposit.Price = depositToAdd.Deposit.Price;
@@ -83,7 +83,7 @@ namespace TireDep.App.Services
            newDeposit.EndDate = depositToAdd.Deposit.EndDate;
            newDeposit.StartDate = depositToAdd.Deposit.StartDate;
 
-           //newDeposit.Owner.Id = depositToAdd.Owner.Id;
+      
            newDeposit.Owner = new Owner();
            newDeposit.Owner.LastName = depositToAdd.Owner.LastName;
            newDeposit.Owner.FirstName = depositToAdd.Owner.FirstName;
@@ -92,7 +92,7 @@ namespace TireDep.App.Services
            newDeposit.Owner.Contact.Tel = depositToAdd.Contact.Tel;
            newDeposit.Owner.Contact.OwnerRef = depositToAdd.Contact.OwnerRef;
 
-            //var deposit = _mapper.Map<Deposit>(depositToAdd);
+      
             var id = _depositRepository.AddDeposit(newDeposit);
             return id;
         }
@@ -147,19 +147,7 @@ namespace TireDep.App.Services
             return result;
         }
 
-        //public async Task<DepositListByOwnerListForVm> GetListAsync(int ownerId)
-        //{
-        //    var deposits = await _depositRepository.GetDepositByOwnerId(ownerId)
-        //        .ProjectTo<DepositByOwnerVm>(_mapper.ConfigurationProvider).ToList();
 
-        //    DepositListByOwnerListForVm result = new DepositListByOwnerListForVm()
-        //    {
-        //        Count = deposits.Count,
-        //        DepositByOwner = deposits
-        //    };
-
-        //    return result;
-        //}
 
         public DepositListByOwnerListForVm ViewDepositsByOwnerName(string piceOfName)
         {
@@ -219,10 +207,7 @@ namespace TireDep.App.Services
             deposit.SeasonTireId = depostToEdit.Season.Id;
             deposit.TireTreadHeight = depostToEdit.Deposit.TireTreadHeight;
 
-            //deposit.Owner = _mapper.Map<Owner>(depostToEdit.Owner);
-            //deposit.Owner.Contact = _mapper.Map<Contact>(depostToEdit.Contact);
-//deposit = _mapper.Map<Deposit>(depostToEdit);
-            //deposit.Owner = depostToEdit.
+
             _depositRepository.UpdateDeposit(deposit);
 
         }
@@ -254,7 +239,7 @@ namespace TireDep.App.Services
             newDeposit.OwnerId = depositToAdd.Deposit.OwnerId;
 
           
-            //var deposit = _mapper.Map<Deposit>(depositToAdd);
+  
             var id = _depositRepository.AddDeposit(newDeposit);
             return id;
         }

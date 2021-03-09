@@ -66,13 +66,14 @@
                     {
                         <h5><strong>This deposit has been returned on @ViewData.Model.EndDate </strong></h5>
                         <input class="btn btn-info" type="button" value="Print Summary" onclick="location.href = '@Url.Action("PrintSummary", "Deposit",new { id = Model.Id })'" />
-                        
+                        <input class="btn btn-info" type="button" value="Go to Index" onclick="location.href = '@Url.Action("Index", "Deposit")'" />
                     }
                     else
                     {
                 
                 <input class="btn btn-info" type="button" value="Edit Deposit" onclick="location.href = '@Url.Action("EditDeposit", "Deposit",new { id = Model.Id })'" />
                         <input class="btn btn-danger" type="button" value="Return Deposit" onclick="location.href = '@Url.Action("ReturnDep", "Deposit",new { id = Model.Id })'" />
+                        <input class="btn btn-info" type="button" value="Go to Index" onclick="location.href = '@Url.Action("Index", "Deposit")'"/>
 
                     }
 

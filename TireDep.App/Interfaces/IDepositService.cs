@@ -11,6 +11,7 @@ namespace TireDep.App.Interfaces
     public interface IDepositService
     {
         LisOfDepositsForListVm GetAllDepositForList(int pageSize, int pageNo, string searchString, string searchStringOwnerName);
+        LisOfDepositsForListVm GetAllDepositForList(string searchString, string searchStringOwnerName);
         int AddDeposit(DepositOwnerVm newDeposit);
         DepositDetVm ViewDepositById(int id);
         DepositListByOwnerListForVm ViewDepositsByOwnerId(int ownerId);
